@@ -3,20 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Evaluation</title>
+  <title>Evaluation | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Evaluation
-    Fulfills RFQ clause(s): 1.d.iv
-    Optional in-built proposal evaluation/scoring.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Evaluation</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 4/5.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../../client-facing/public/index.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <nav class="site-nav"><a href="my-hackathons.html">My Hackathons</a><a href="proposals.html">Proposals</a><a href="evaluation.html" aria-current="page">Evaluation</a><span class="site-nav__admin"><a href="../esg-only/hackathon-management.html">Hackathon Mgmt</a><a href="../esg-only/demand-driver-management.html">Demand Drivers</a><a href="../esg-only/user-access-management.html">Access</a><a href="../esg-only/content-management.html">Content</a><a href="../esg-only/events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="notifications.html">Notifications</a><a href="account.html">Account</a><a href="../../client-facing/public/index.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container">
+        <h2>Evaluation</h2>
+        <p class="text-muted">Optional feature (RFQ 1.d.iv) - scoring Portside Analytics' CS1 submission.</p>
+        <form>
+          <div class="form-field"><label>Feasibility (0-10)</label><input type="number" min="0" max="10" value="7" /></div>
+          <div class="form-field"><label>Impact on Meridian's operations (0-10)</label><input type="number" min="0" max="10" value="8" /></div>
+          <div class="form-field"><label>Innovation (0-10)</label><input type="number" min="0" max="10" value="6" /></div>
+          <div class="form-field"><label>Team capability (0-10)</label><input type="number" min="0" max="10" value="7" /></div>
+          <div class="form-field"><label>Comments</label><textarea rows="4" placeholder="Notes for the judging panel..."></textarea></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary">Submit Score</button></div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

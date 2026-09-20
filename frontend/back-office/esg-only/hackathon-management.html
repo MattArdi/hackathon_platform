@@ -3,20 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hackathon Management</title>
+  <title>Hackathon Management | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Hackathon Management
-    Fulfills RFQ clause(s): 1.c.ii
-    Create/edit/publish/close hackathons; assign/onboard demand driver(s); deadline control including extension.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Hackathon Management</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 5.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../../client-facing/public/index.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <nav class="site-nav"><a href="../shared/my-hackathons.html">My Hackathons</a><a href="../shared/proposals.html">Proposals</a><a href="../shared/evaluation.html">Evaluation</a><span class="site-nav__admin"><a href="hackathon-management.html" aria-current="page">Hackathon Mgmt</a><a href="demand-driver-management.html">Demand Drivers</a><a href="user-access-management.html">Access</a><a href="content-management.html">Content</a><a href="events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="../shared/notifications.html">Notifications</a><a href="../shared/account.html">Account</a><a href="../../client-facing/public/index.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container-wide">
+        <h2>Hackathon Management</h2>
+        
+        <table class="data-table">
+          <thead><tr><th>Hackathon</th><th>Demand driver</th><th>Status</th><th>Deadline</th><th>Proposals</th></tr></thead>
+          <tbody>
+            <tr><td>Smart Logistics &amp; Supply Chain Resilience</td><td>Meridian Logistics Pte Ltd</td><td><span class="badge badge-open">Live</span></td><td>6 Mar 2026</td><td>27</td></tr>
+            <tr><td>GreenFactory Digitalisation Challenge</td><td>Arcflow Manufacturing Pte Ltd</td><td><span class="badge badge-evaluating">Evaluating</span></td><td>14 Feb 2026</td><td>19</td></tr>
+            <tr><td>Retail Demand Forecasting Sprint</td><td>Northgate Retail Group</td><td><span class="badge badge-closed">Closed</span></td><td>30 Nov 2025</td><td>34</td></tr>
+          </tbody>
+        </table>
+
+        <div class="form-actions"><button type="button" class="btn btn-primary">+ New Hackathon</button></div>
+
+        <h3 style="margin-top:32px;">Edit &middot; Smart Logistics &amp; Supply Chain Resilience</h3>
+        <form style="max-width:560px;">
+          <div class="form-field"><label>Hackathon name</label><input type="text" value="Smart Logistics &amp; Supply Chain Resilience" /></div>
+          <div class="form-field"><label>Demand driver</label><select><option selected>Meridian Logistics Pte Ltd</option><option>Arcflow Manufacturing Pte Ltd</option></select></div>
+          <div class="form-field"><label>Submission deadline</label><input type="datetime-local" value="2026-03-06T18:00" /></div>
+          <div class="form-field"><label>Status</label><select><option selected>Live</option><option>Draft</option><option>Closed</option></select></div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary">Extend Deadline</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

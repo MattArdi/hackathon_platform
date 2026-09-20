@@ -3,20 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events Management</title>
+  <title>Events Management | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Events Management
-    Fulfills RFQ clause(s): 1.a.ii
-    Create briefing/outreach/milestone events; view registration lists.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Events Management</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 5.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../../client-facing/public/index.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <nav class="site-nav"><a href="../shared/my-hackathons.html">My Hackathons</a><a href="../shared/proposals.html">Proposals</a><a href="../shared/evaluation.html">Evaluation</a><span class="site-nav__admin"><a href="hackathon-management.html">Hackathon Mgmt</a><a href="demand-driver-management.html">Demand Drivers</a><a href="user-access-management.html">Access</a><a href="content-management.html">Content</a><a href="events-management.html" aria-current="page">Events</a></span></nav><div class="site-header__actions"><a href="../shared/notifications.html">Notifications</a><a href="../shared/account.html">Account</a><a href="../../client-facing/public/index.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container-wide">
+        <h2>Events Management</h2>
+        <table class="data-table">
+          <thead><tr><th>Event</th><th>Date</th><th>Registrations</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Challenge briefing session</td><td>22 Jan 2026</td><td>142</td><td><a href="#">View list</a></td></tr>
+            <tr><td>Mid-challenge clinic</td><td>6 Feb 2026</td><td>38</td><td><a href="#">View list</a></td></tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top:32px;">Create event</h3>
+        <form style="max-width:480px;">
+          <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
+          <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary">Create Event</button></div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

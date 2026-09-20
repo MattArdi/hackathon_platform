@@ -3,20 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home / Challenge Landing</title>
+  <title>Home | EnterpriseSG Open Innovation Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Home / Challenge Landing
-    Fulfills RFQ clause(s): 1.a.i, 1.e.i
-    Hero, challenge summary, key dates, CTA to Register/Apply.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Home / Challenge Landing</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 3.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <nav class="site-nav"><a href="index.html" aria-current="page">Home</a><a href="challenge-info.html">Challenge Info</a><a href="faqs.html">FAQs</a></nav><div class="site-header__actions"><a href="login.html" class="btn btn-primary">Login / Register</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__eyebrow">EnterpriseSG &middot; Open Innovation Challenge</div>
+        <h1>Smart Logistics &amp; Supply Chain Resilience</h1>
+        <p>Presented with Meridian Logistics Pte Ltd. Submit a working solution to one of three real supply-chain problem statements and pilot it with Meridian's operations team.</p>
+        <div class="hero__actions">
+          <a href="login.html" class="btn btn-primary">Register to Participate</a>
+          <a href="challenge-info.html#challenge-statements" class="btn btn-secondary">View Challenge Statements</a>
+        </div>
+        <div class="stat-bar">
+          <div class="stat-bar__item"><div class="stat-bar__value">S$50,000</div><div class="stat-bar__label">Prize pool</div></div>
+          <div class="stat-bar__item"><div class="stat-bar__value">3</div><div class="stat-bar__label">Challenge statements</div></div>
+          <div class="stat-bar__item"><div class="stat-bar__value">8 weeks</div><div class="stat-bar__label">Submission window</div></div>
+          <div class="stat-bar__item"><div class="stat-bar__value">Open</div><div class="stat-bar__label">Singapore-registered teams</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>About this challenge</h2>
+        <p class="text-secondary">Meridian Logistics operates container yards and last-mile distribution hubs across Singapore. Congestion, delivery delays, and limited real-time visibility into upstream risk are costing the business time and money - and slowing its customers down. EnterpriseSG is running this Open Innovation Challenge to connect Meridian with solution providers who can prototype a working fix against one of three problem statements below, with the strongest submissions piloted directly in Meridian's operations.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Presented with</h2>
+        <div class="card" style="max-width:480px;">
+          <strong>Meridian Logistics Pte Ltd</strong>
+          <p class="text-secondary mt-0">A Singapore-headquartered port and freight logistics operator running container yard, warehousing, and last-mile delivery operations across the region.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Key dates</h2>
+        <ul class="timeline">
+          <li class="is-past"><div class="timeline__date">12 Jan 2026</div>Registration opens</li>
+          <li class="is-past"><div class="timeline__date">22 Jan 2026</div>Challenge briefing session</li>
+          <li><div class="timeline__date">6 Mar 2026</div>Submission deadline</li>
+          <li><div class="timeline__date">27 Mar 2026</div>Results announced</li>
+        </ul>
+        <p><a href="challenge-info.html#timeline">View full timeline &rarr;</a></p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div class="footer-links"><a href="challenge-info.html">Challenge Info</a><a href="faqs.html">FAQs</a><a href="privacy.html">Privacy &amp; Data Retention</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

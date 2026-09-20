@@ -3,20 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Messages</title>
+  <title>Messages | EnterpriseSG Open Innovation Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Messages
-    Fulfills RFQ clause(s): 1.d.ii
-    Chat with Contractor / demand driver / EnterpriseSG.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Messages</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 3.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../public/index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <nav class="site-nav"><a href="../public/index.html">Home</a><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="dashboard.html">My Dashboard</a><a href="messages.html" aria-current="page">Messages</a></nav><div class="site-header__actions"><a href="account.html">My Account</a><a href="../public/login.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container">
+        <h2>Messages</h2>
+        <div class="chat-shell">
+          <div class="chat-threads">
+            <a href="#" class="chat-thread is-active"><strong>Meridian Logistics</strong><span>Re: yard layout data</span></a>
+            <a href="#" class="chat-thread"><strong>EnterpriseSG Support</strong><span>Deadline extension confirmed</span></a>
+          </div>
+          <div class="chat-panel">
+            <div class="chat-messages">
+              <div class="chat-bubble from-them">Hi - attaching the yard layout diagram you asked for.</div>
+              <div class="chat-bubble from-me">Thanks, that's really helpful for the congestion model.</div>
+              <div class="chat-bubble from-them">Happy to jump on a call before the mid-challenge clinic if useful.</div>
+            </div>
+            <form class="chat-compose">
+              <input type="text" placeholder="Type a message..." />
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div class="footer-links"><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="../public/privacy.html">Privacy &amp; Data Retention</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

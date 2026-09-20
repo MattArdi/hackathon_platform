@@ -3,20 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proposals</title>
+  <title>Proposals | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Proposals
-    Fulfills RFQ clause(s): 1.b.i, 1.b.ii
-    DD role: filtered to that DD's own challenge statement(s). ESG role: unrestricted, filterable across all hackathons/DDs.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Proposals</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 4/5.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../../client-facing/public/index.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <nav class="site-nav"><a href="my-hackathons.html">My Hackathons</a><a href="proposals.html" aria-current="page">Proposals</a><a href="evaluation.html">Evaluation</a><span class="site-nav__admin"><a href="../esg-only/hackathon-management.html">Hackathon Mgmt</a><a href="../esg-only/demand-driver-management.html">Demand Drivers</a><a href="../esg-only/user-access-management.html">Access</a><a href="../esg-only/content-management.html">Content</a><a href="../esg-only/events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="notifications.html">Notifications</a><a href="account.html">Account</a><a href="../../client-facing/public/index.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container-wide">
+        <h2>Proposals</h2>
+        <table class="data-table">
+          <thead><tr><th>Team</th><th>Challenge statement</th><th>Hackathon</th><th>Status</th><th>Submitted</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Portside Analytics</td><td>CS1 &middot; Yard Congestion</td><td>Smart Logistics</td><td><span class="badge badge-closed">Submitted</span></td><td>4 Mar 2026</td><td><a href="evaluation.html">Evaluate</a></td></tr>
+            <tr><td>RouteWise</td><td>CS2 &middot; Last-Mile Routing</td><td>Smart Logistics</td><td><span class="badge badge-draft">Draft</span></td><td>-</td><td><a href="evaluation.html">Evaluate</a></td></tr>
+            <tr><td>Beacon Risk Labs</td><td>CS3 &middot; Risk Alerting</td><td>Smart Logistics</td><td><span class="badge badge-closed">Submitted</span></td><td>3 Mar 2026</td><td><a href="evaluation.html">Evaluate</a></td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:32px;">Portside Analytics &middot; CS1</h3>
+        <div class="card">
+          <p class="text-secondary"><strong>Solution:</strong> Yard congestion early-warning model - a 4-12hr forecast using gate and berth schedule data.</p>
+          <p class="text-secondary"><strong>Documents:</strong> solution-writeup.pdf, demo-video.mp4</p>
+          <p class="text-secondary"><strong>Submitted:</strong> 4 Mar 2026, 5:12pm SGT</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

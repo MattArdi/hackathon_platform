@@ -3,20 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Management</title>
+  <title>Content Management | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Content Management
-    Fulfills RFQ clause(s): 1.e.i-viii, 1.d.iii
-    Edits the client-facing site's Challenge Info page content and FAQs — including the chatbot's answer set, sourced from the same FAQ content.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Content Management</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 5.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../../client-facing/public/index.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <nav class="site-nav"><a href="../shared/my-hackathons.html">My Hackathons</a><a href="../shared/proposals.html">Proposals</a><a href="../shared/evaluation.html">Evaluation</a><span class="site-nav__admin"><a href="hackathon-management.html">Hackathon Mgmt</a><a href="demand-driver-management.html">Demand Drivers</a><a href="user-access-management.html">Access</a><a href="content-management.html" aria-current="page">Content</a><a href="events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="../shared/notifications.html">Notifications</a><a href="../shared/account.html">Account</a><a href="../../client-facing/public/index.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container-wide">
+        <h2>Content Management</h2>
+        <p class="text-muted">Edits here publish directly to the client-facing <a href="../../client-facing/public/challenge-info.html">Challenge Info</a> page and <a href="../../client-facing/public/faqs.html">FAQs</a> - including the chatbot's answers, which are sourced from this same FAQ content.</p>
+        <div data-tabs>
+          <div class="tabs__list">
+            <button class="tabs__tab is-active" data-tab="general">General Info</button>
+            <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+            <button class="tabs__tab" data-tab="timeline">Timeline</button>
+            <button class="tabs__tab" data-tab="rules">Rules</button>
+            <button class="tabs__tab" data-tab="faqs">FAQs</button>
+          </div>
+          <div class="tabs__panel is-active" data-panel="general">
+            <div class="form-field"><label>General information</label><textarea rows="5">Meridian Logistics operates container yards and last-mile distribution hubs across Singapore...</textarea></div>
+            <div class="form-actions"><button type="button" class="btn btn-primary">Publish</button></div>
+          </div>
+          <div class="tabs__panel" data-panel="statements">
+            <div class="form-field"><label>CS1 title</label><input type="text" value="Predictive Container Yard Congestion" /></div>
+            <div class="form-field"><label>CS1 description</label><textarea rows="3">Forecast yard congestion 4-12 hours ahead...</textarea></div>
+            <div class="form-actions"><button type="button" class="btn btn-primary">Publish</button></div>
+          </div>
+          <div class="tabs__panel" data-panel="timeline">
+            <div class="form-field"><label>Submission deadline</label><input type="datetime-local" value="2026-03-06T18:00" disabled /></div>
+            <div class="form-field__hint">Deadline itself is set from Hackathon Management; this tab controls how it's described on the public page.</div>
+          </div>
+          <div class="tabs__panel" data-panel="rules">
+            <div class="form-field"><label>Rules &amp; regulations</label><textarea rows="6">Open to Singapore-registered entities and individuals; teams of up to 5...</textarea></div>
+            <div class="form-actions"><button type="button" class="btn btn-primary">Publish</button></div>
+          </div>
+          <div class="tabs__panel" data-panel="faqs">
+            <div class="form-field"><label>Question</label><input type="text" value="Who can participate?" /></div>
+            <div class="form-field"><label>Answer</label><textarea rows="3">Any Singapore-registered company or individual forming a team of up to 5 people.</textarea></div>
+            <div class="form-actions"><button type="button" class="btn btn-secondary">+ Add FAQ</button><button type="button" class="btn btn-primary">Publish</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

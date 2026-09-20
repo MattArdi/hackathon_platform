@@ -1,10 +1,10 @@
 /*
  * EnterpriseSG brand tokens for this platform's client-facing and back-office apps.
- * Source: EnterpriseSG Website — Design System Analysis (extracted from enterprisesg.gov.sg's
+ * Source: EnterpriseSG Website - Design System Analysis (extracted from enterprisesg.gov.sg's
  * shipped CSS/assets). Two deliberate deviations from that source, per review:
  *   1. The site's three near-identical reds (#e7131a / #d91218 / #db0000-#c60000) are normalized
  *      to one brand red + one distinct alert red, rather than reproduced as-is.
- *   2. The Singapore government masthead (SGDS) and its icon font are NOT included — these are
+ *   2. The Singapore government masthead (SGDS) and its icon font are NOT included - these are
  *      shared gov.sg infrastructure, not ESG's own brand, and this service is not hosted on
  *      enterprisesg.gov.sg itself.
  */
@@ -14,11 +14,11 @@
   --color-brand-red: #e7131a;
   --color-brand-red-hover: #9f0d12;
 
-  /* Alert color — kept visually distinct from brand red so warnings never read as CTAs */
+  /* Alert color - kept visually distinct from brand red so warnings never read as CTAs */
   --color-alert-red: #db0000;
   --color-alert-bg: #fdeaeb;
 
-  /* Interactive (link/secondary-action) color — the site's actual highest-frequency accent */
+  /* Interactive (link/secondary-action) color - the site's actual highest-frequency accent */
   --color-link: #1c76d5;
   --color-link-alt: #0f6ab4;
 
@@ -46,7 +46,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  /* Radius scale — small and restrained, matching the source site */
+  /* Radius scale - small and restrained, matching the source site */
   --radius-sm: 4px;
   --radius-md: 5px;
   --radius-lg: 8px;
@@ -55,7 +55,7 @@
   /* Elevation */
   --shadow-card: 0 0 10px rgba(0, 0, 0, 0.15);
 
-  /* Motion — short, utilitarian */
+  /* Motion - short, utilitarian */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
 }

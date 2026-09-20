@@ -3,20 +3,101 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Dashboard</title>
+  <title>My Dashboard | EnterpriseSG Open Innovation Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: My Dashboard
-    Fulfills RFQ clause(s): 1.a.iii, 1.c.i, 1.c.ii, 1.a.ii
-    Merged page: status overview, Proposal Submission, Draft Proposal, Submitted Proposal, My Registered Events — all as sections of one page.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>My Dashboard</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 3.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../public/index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <nav class="site-nav"><a href="../public/index.html">Home</a><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="dashboard.html" aria-current="page">My Dashboard</a><a href="messages.html">Messages</a></nav><div class="site-header__actions"><a href="account.html">My Account</a><a href="../public/login.html" class="btn btn-secondary">Log Out</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container">
+        <h2>My Dashboard</h2>
+        <div data-tabs>
+          <div class="tabs__list">
+            <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+            <button class="tabs__tab" data-tab="submit">Proposal Submission</button>
+            <button class="tabs__tab" data-tab="draft">Draft Proposal</button>
+            <button class="tabs__tab" data-tab="submitted">Submitted Proposal</button>
+            <button class="tabs__tab" data-tab="events">My Registered Events</button>
+          </div>
+
+          <div class="tabs__panel is-active" data-panel="overview">
+            <div class="grid grid-2">
+              <div class="card card-elevated">
+                <span class="badge badge-open">6 days left</span>
+                <h3>Submission deadline</h3>
+                <p class="text-secondary">6 Mar 2026, 6:00pm SGT &middot; CS1 &middot; Predictive Container Yard Congestion</p>
+              </div>
+              <div class="card card-elevated">
+                <h3>Notifications</h3>
+                <p class="text-secondary">Mid-challenge clinic slots are open - register from Challenge Info.</p>
+                <p class="text-secondary">Your draft was last saved 2 days ago.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-panel="submit">
+            <form style="max-width:560px;">
+              <div class="form-field"><label>Team name</label><input type="text" value="Portside Analytics" /></div>
+              <div class="form-field"><label>Challenge statement</label>
+                <select><option>CS1 &middot; Predictive Container Yard Congestion</option><option>CS2 &middot; Last-Mile Route Optimization</option><option>CS3 &middot; Supply Chain Risk Alerting</option></select>
+              </div>
+              <div class="form-field"><label>Solution title</label><input type="text" placeholder="Name your solution" /></div>
+              <div class="form-field"><label>Solution description</label><textarea rows="5" placeholder="Describe your approach..."></textarea></div>
+              <div class="form-field"><label>Supporting documents</label><input type="file" /><div class="form-field__hint">PDF, up to 20MB.</div></div>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary">Save Draft</button>
+                <button type="button" class="btn btn-primary">Submit Proposal</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="tabs__panel" data-panel="draft">
+            <div class="card">
+              <span class="badge badge-draft">Draft</span>
+              <h3>Yard congestion early-warning model</h3>
+              <p class="text-secondary">CS1 &middot; Predictive Container Yard Congestion &middot; last saved 2 days ago</p>
+              <p class="form-actions"><button type="button" class="btn btn-secondary">Continue Editing</button></p>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-panel="submitted">
+            <p class="text-muted">Example of the read-only view once a proposal has been submitted:</p>
+            <div class="card">
+              <span class="badge badge-closed">Submitted</span>
+              <h3>Yard congestion early-warning model</h3>
+              <p class="text-secondary">CS1 &middot; Predictive Container Yard Congestion &middot; submitted 4 Mar 2026</p>
+              <p class="text-secondary">solution-writeup.pdf &middot; demo-video.mp4</p>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-panel="events">
+            <div class="card">
+              <strong>Mid-challenge clinic</strong>
+              <p class="text-secondary mt-0">6 Feb 2026, 3:00–4:30pm SGT &middot; registered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div class="footer-links"><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="../public/privacy.html">Privacy &amp; Data Retention</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>

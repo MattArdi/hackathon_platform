@@ -3,20 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login / Register</title>
+  <title>Login | EnterpriseSG Open Innovation Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
   <link rel="stylesheet" href="../../../shared/styles/components.css" />
 </head>
 <body>
-  <!--
-    Blueprint page: Login / Register
-    Fulfills RFQ clause(s): -
-    Applicant self-registration; separate identity from the back-office app's provisioned accounts.
-  -->
-  <main class="card" style="max-width: 720px; margin: 40px auto;">
-    <h1>Login / Register</h1>
-    <p>Placeholder — see "OI Challenge Platform — Page Architecture" doc, Section 3.</p>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <nav class="site-nav"><a href="index.html">Home</a><a href="challenge-info.html">Challenge Info</a><a href="faqs.html">FAQs</a></nav><div class="site-header__actions"><a href="login.html" class="btn btn-primary">Login / Register</a></div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container" style="max-width:420px;">
+        <h2>Login / Register</h2>
+        <div class="card" data-tabs>
+          <div class="tabs__list">
+            <button class="tabs__tab is-active" data-tab="login">Login</button>
+            <button class="tabs__tab" data-tab="register">Register</button>
+          </div>
+          <div class="tabs__panel is-active" data-panel="login">
+            <form onsubmit="event.preventDefault(); window.location='../applicant/dashboard.html';">
+              <div class="form-field"><label for="login-email">Email</label><input id="login-email" type="email" placeholder="you@company.com" /></div>
+              <div class="form-field"><label for="login-password">Password</label><input id="login-password" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" /></div>
+              <div class="form-actions"><button type="submit" class="btn btn-primary">Log In</button></div>
+            </form>
+          </div>
+          <div class="tabs__panel" data-panel="register">
+            <form onsubmit="event.preventDefault(); window.location='../applicant/dashboard.html';">
+              <div class="form-field"><label for="reg-team">Team name</label><input id="reg-team" type="text" placeholder="e.g. Portside Analytics" /></div>
+              <div class="form-field"><label for="reg-email">Email</label><input id="reg-email" type="email" placeholder="you@company.com" /></div>
+              <div class="form-field"><label for="reg-password">Password</label><input id="reg-password" type="password" /></div>
+              <div class="form-actions"><button type="submit" class="btn btn-primary">Create Account</button></div>
+            </form>
+          </div>
+        </div>
+        <p class="text-muted" style="margin-top:20px;">Demand driver or EnterpriseSG staff? <a href="../../back-office/shared/login.html">Go to the Challenge Console</a>.</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div class="footer-links"><a href="challenge-info.html">Challenge Info</a><a href="faqs.html">FAQs</a><a href="privacy.html">Privacy &amp; Data Retention</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
 </body>
 </html>
