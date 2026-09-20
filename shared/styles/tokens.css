@@ -1,0 +1,61 @@
+/*
+ * EnterpriseSG brand tokens for this platform's client-facing and back-office apps.
+ * Source: EnterpriseSG Website — Design System Analysis (extracted from enterprisesg.gov.sg's
+ * shipped CSS/assets). Two deliberate deviations from that source, per review:
+ *   1. The site's three near-identical reds (#e7131a / #d91218 / #db0000-#c60000) are normalized
+ *      to one brand red + one distinct alert red, rather than reproduced as-is.
+ *   2. The Singapore government masthead (SGDS) and its icon font are NOT included — these are
+ *      shared gov.sg infrastructure, not ESG's own brand, and this service is not hosted on
+ *      enterprisesg.gov.sg itself.
+ */
+
+:root {
+  /* Brand color */
+  --color-brand-red: #e7131a;
+  --color-brand-red-hover: #9f0d12;
+
+  /* Alert color — kept visually distinct from brand red so warnings never read as CTAs */
+  --color-alert-red: #db0000;
+  --color-alert-bg: #fdeaeb;
+
+  /* Interactive (link/secondary-action) color — the site's actual highest-frequency accent */
+  --color-link: #1c76d5;
+  --color-link-alt: #0f6ab4;
+
+  /* Neutrals */
+  --color-text: #282828;
+  --color-text-secondary: #424242;
+  --color-text-muted: #686868;
+  --color-text-disabled: #a4a4a4;
+  --color-border: #d9d9d9;
+
+  /* Surfaces */
+  --color-surface: #ffffff;
+  --color-surface-alt: #ecefef;
+  --color-surface-tint: #f6f8ff;
+  --color-surface-muted: #f8f8f8;
+
+  /* Typography */
+  --font-family-base: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Radius scale — small and restrained, matching the source site */
+  --radius-sm: 4px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+
+  /* Elevation */
+  --shadow-card: 0 0 10px rgba(0, 0, 0, 0.15);
+
+  /* Motion — short, utilitarian */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
