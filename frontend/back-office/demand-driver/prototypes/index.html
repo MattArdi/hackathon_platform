@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Replace-Item Pattern Prototypes | EnterpriseSG Challenge Console</title>
+  <link rel="stylesheet" href="../../../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../control.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <div class="site-header__right">
+        <a href="../control.html" class="btn btn-secondary">&larr; Back to Control Panel</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="content-section" style="padding-top:32px;">
+      <div class="container">
+        <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt);">
+          <strong>Research notes.</strong> The current "Replace [item]" sections are a bare
+          <code>&lt;input type="file"&gt;</code> plus a button - functional but visually flat next to the rest of the console.
+          Five patterns below come from how file-replace flows are actually built elsewhere:
+          <a href="https://uxpatterns.dev/patterns/media/image-upload" target="_blank" rel="noopener noreferrer">dual drag-and-drop + click-to-browse</a> as the baseline expectation;
+          keeping (not silently discarding) the previous version, per the same source;
+          the <a href="https://help.myportfolio.com/hc/en-us/articles/360037000974-Editing-a-Cover-Image" target="_blank" rel="noopener noreferrer">hover-to-reveal-edit</a> pattern Adobe Portfolio and most cover-image editors use;
+          <a href="https://support.google.com/drive/answer/2409045" target="_blank" rel="noopener noreferrer">Google Drive's "manage versions"</a> and Figma's version history as the model for version-aware replacement;
+          and dashboard-card guidance on an 8px spacing unit and letting type/space (not boxes) carry hierarchy, from
+          <a href="https://www.alfdesigngroup.com/post/best-practices-to-design-ui-cards-for-your-website" target="_blank" rel="noopener noreferrer">card/spacing best practices</a>.
+        </div>
+      </div>
+    </section>
+
+  <style>
+.dropzone { border: 2px dashed var(--color-border); border-radius: var(--radius-lg); padding: 32px; text-align: center; background: var(--color-surface-tint); transition: border-color var(--transition-fast); margin-bottom: 24px; }
+.dropzone:hover { border-color: var(--color-brand-red); }
+.dropzone__icon { font-size: 28px; color: var(--color-text-disabled); margin-bottom: 8px; }
+.dropzone h4 { margin: 0 0 4px; }
+.dropzone .btn { margin-top: 12px; }
+.dropzone__hint { font-size: 12px; color: var(--color-text-muted); margin-top: 6px; }
+.dropzone__current { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 12px; font-size: 13px; color: var(--color-text-secondary); }
+</style>
+  <section class="content-section" id="proto-1">
+    <div class="container">
+      <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt); margin-bottom:24px;"><strong>Prototype 1 of 5 &middot; Dropzone.</strong> The baseline expected pattern: a large drag-and-drop target with a click-to-browse fallback button, so both mouse-drag and keyboard/screen-reader users have an obvious path in.</div>
+      
+      <h4>Hero image</h4>
+      <div class="dropzone">
+        <div class="dropzone__icon">&#8593;</div>
+        <h4 class="mt-0">Drag &amp; drop to replace</h4>
+        <p class="text-secondary mt-0">or click to browse your files</p>
+        <button type="button" class="btn btn-secondary">Choose File</button>
+        <div class="dropzone__hint">PNG or JPG, up to 5MB, 1600&times;600 recommended</div>
+        <div class="dropzone__current">Current: hero-smart-logistics.png</div>
+      </div>
+      <h4>Terms &amp; Conditions</h4>
+      <div class="dropzone">
+        <div class="dropzone__icon">&#8593;</div>
+        <h4 class="mt-0">Drag &amp; drop to replace</h4>
+        <p class="text-secondary mt-0">or click to browse your files</p>
+        <button type="button" class="btn btn-secondary">Choose File</button>
+        <div class="dropzone__hint">DOCX or PDF, up to 10MB</div>
+        <div class="dropzone__current">Current: Terms_and_Conditions_Placeholder.docx</div>
+      </div>
+      <h4>Recording</h4>
+      <div class="dropzone">
+        <div class="dropzone__icon">&#8593;</div>
+        <h4 class="mt-0">Drag &amp; drop to replace</h4>
+        <p class="text-secondary mt-0">or click to browse your files</p>
+        <button type="button" class="btn btn-secondary">Choose File</button>
+        <div class="dropzone__hint">MP4, up to 500MB</div>
+        <div class="dropzone__current">Current: mid-challenge-clinic.mp4</div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+.replace-preview { position: relative; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 24px; cursor: pointer; }
+.replace-preview .placeholder-image { margin: 0; border-radius: 0; }
+.replace-preview__overlay { position: absolute; inset: 0; background: rgba(20,20,20,0.55); color: var(--color-surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; opacity: 0; transition: opacity var(--transition-fast); font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); }
+.replace-preview:hover .replace-preview__overlay { opacity: 1; }
+.replace-preview__overlay .icon { font-size: 22px; }
+.replace-preview__file { display: flex; align-items: center; gap: 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 24px; }
+.replace-preview__file .download-card__icon { position: relative; }
+.replace-preview__file:hover .file-overlay { opacity: 1; }
+.file-overlay { position: absolute; inset: 0; background: rgba(20,20,20,0.6); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition-fast); color: var(--color-surface); font-size: 16px; }
+</style>
+  <section class="content-section" id="proto-2">
+    <div class="container">
+      <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt); margin-bottom:24px;"><strong>Prototype 2 of 5 &middot; Hover-to-Replace Preview.</strong> The current asset is shown full-size, not hidden behind an input field. Hovering reveals the replace action directly on top of it - the pattern Adobe Portfolio and most cover-image editors use, so you always see what you're about to change before you change it.</div>
+      
+      <h4 class="mt-0">Hero image</h4>
+      <div class="replace-preview" style="height:200px;">
+        <div class="placeholder-image" style="height:200px;">Current hero image</div>
+        <div class="replace-preview__overlay"><span class="icon">&#9998;</span>Replace image</div>
+      </div>
+
+      <h4>Terms &amp; Conditions</h4>
+      <div class="replace-preview__file" style="position:relative;">
+        <span class="download-card__icon">DOCX</span>
+        <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+
+      <h4>Recording</h4>
+      <div class="replace-preview__file" style="position:relative;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>mid-challenge-clinic.mp4</strong><span>6 Feb 2026 &middot; 38 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+.file-row { display: flex; align-items: center; gap: 14px; padding: 12px 4px; border-bottom: 1px solid var(--color-border); }
+.file-row:first-of-type { border-top: 1px solid var(--color-border); }
+.file-row__icon { width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--color-surface-alt); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: var(--font-weight-bold); color: var(--color-text-secondary); flex-shrink: 0; }
+.file-row__meta { flex: 1; }
+.file-row__meta strong { display: block; font-size: var(--font-size-sm); }
+.file-row__meta span { font-size: 12px; color: var(--color-text-muted); }
+.file-row__actions { display: flex; gap: 14px; font-size: 13px; }
+.file-row__actions label { color: var(--color-link); cursor: pointer; }
+.file-row__actions label:hover { color: var(--color-link-alt); }
+.file-row__actions input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+</style>
+  <section class="content-section" id="proto-3">
+    <div class="container">
+      <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt); margin-bottom:24px;"><strong>Prototype 3 of 5 &middot; Compact File Row.</strong> The lowest-chrome option: each item is one dense row (icon, filename, metadata, inline actions) instead of a full card. The Replace action is a real, keyboard-accessible file input visually hidden behind a styled label - the accessible pattern for file inputs. Best when a page has many such rows and can't afford a full card each.</div>
+      
+      <div class="file-row">
+        <div class="file-row__icon">IMG</div>
+        <div class="file-row__meta"><strong>hero-smart-logistics.png</strong><span>1600&times;600 &middot; 340KB</span></div>
+        <div class="file-row__actions">
+          <label>Replace<input type="file" /></label>
+          <a href="#">Download</a>
+        </div>
+      </div>
+      <div class="file-row">
+        <div class="file-row__icon">DOCX</div>
+        <div class="file-row__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Uploaded 12 Jan 2026</span></div>
+        <div class="file-row__actions">
+          <label>Replace<input type="file" /></label>
+          <a href="#">Download</a>
+        </div>
+      </div>
+      <div class="file-row">
+        <div class="file-row__icon">MP4</div>
+        <div class="file-row__meta"><strong>mid-challenge-clinic.mp4</strong><span>38 min &middot; 210MB</span></div>
+        <div class="file-row__actions">
+          <label>Replace<input type="file" /></label>
+          <a href="#">Download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+.version-card { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 24px; }
+.version-card__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.version-card__current { display: flex; align-items: center; gap: 12px; }
+.version-card__badge { font-size: 11px; background: var(--color-surface-alt); color: var(--color-text-secondary); padding: 2px 8px; border-radius: 999px; }
+.version-card__history { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--color-border); font-size: 12px; color: var(--color-text-muted); }
+</style>
+  <section class="content-section" id="proto-4">
+    <div class="container">
+      <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt); margin-bottom:24px;"><strong>Prototype 4 of 5 &middot; Version-Aware Upload.</strong> Borrows the Google Drive / Figma model: replacing a file creates a new version rather than silently overwriting the old one, and that history is one click away. Best fit for the T&amp;Cs specifically, since a demand driver may need to point back to what an applicant actually agreed to.</div>
+      
+      <div class="version-card">
+        <div class="version-card__row">
+          <div class="version-card__current">
+            <span class="download-card__icon">IMG</span>
+            <span class="download-card__meta"><strong>hero-smart-logistics.png</strong><span>v3 &middot; uploaded 3 Mar 2026</span></span>
+          </div>
+          <button type="button" class="btn btn-secondary">Upload New Version</button>
+        </div>
+        <div class="version-card__history">Previous versions are kept, not discarded - <a href="#">view version history (3 versions)</a></div>
+      </div>
+      <div class="version-card">
+        <div class="version-card__row">
+          <div class="version-card__current">
+            <span class="download-card__icon">DOCX</span>
+            <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>v2 &middot; uploaded 20 Feb 2026</span></span>
+          </div>
+          <button type="button" class="btn btn-secondary">Upload New Version</button>
+        </div>
+        <div class="version-card__history">Previous versions are kept, not discarded - <a href="#">view version history (2 versions)</a></div>
+      </div>
+      <div class="version-card">
+        <div class="version-card__row">
+          <div class="version-card__current">
+            <span class="download-card__icon">MP4</span>
+            <span class="download-card__meta"><strong>mid-challenge-clinic.mp4</strong><span>v1 &middot; uploaded 6 Feb 2026</span></span>
+          </div>
+          <button type="button" class="btn btn-secondary">Upload New Version</button>
+        </div>
+        <div class="version-card__history">Previous versions are kept, not discarded - <a href="#">view version history (1 version)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+.swap-row { display: flex; align-items: baseline; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+.swap-row:first-of-type { border-top: 1px solid var(--color-border); }
+.swap-row__label { font-size: 12px; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.swap-row__value { font-size: var(--font-size-sm); }
+.swap-row__change { font-size: 13px; color: var(--color-link); cursor: pointer; }
+.swap-row__change:hover { color: var(--color-link-alt); }
+</style>
+  <section class="content-section" id="proto-5">
+    <div class="container">
+      <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt); margin-bottom:24px;"><strong>Prototype 5 of 5 &middot; Minimal Inline Swap.</strong> The lightest-weight option, with no card chrome at all - just a labeled value and a text-link action, the way Notion or Airtable treat an attachment field. Hierarchy comes from type and spacing, not boxes, matching the admin-dashboard guidance that boxes-on-boxes is what makes a console feel bland in the first place.</div>
+      
+      <div class="swap-row">
+        <div><div class="swap-row__label">Hero image</div><div class="swap-row__value">hero-smart-logistics.png</div></div>
+        <label class="swap-row__change">Change<input type="file" style="position:absolute; width:1px; height:1px; opacity:0;" /></label>
+      </div>
+      <div class="swap-row">
+        <div><div class="swap-row__label">Terms &amp; Conditions</div><div class="swap-row__value">Terms_and_Conditions_Placeholder.docx</div></div>
+        <label class="swap-row__change">Change<input type="file" style="position:absolute; width:1px; height:1px; opacity:0;" /></label>
+      </div>
+      <div class="swap-row">
+        <div><div class="swap-row__label">Recording</div><div class="swap-row__value">mid-challenge-clinic.mp4</div></div>
+        <label class="swap-row__change">Change<input type="file" style="position:absolute; width:1px; height:1px; opacity:0;" /></label>
+      </div>
+    </div>
+  </section>
+</main>
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>Design prototype &middot; not linked from the live console</div>
+      <div class="footer-links"><a href="../control.html">Control Panel</a></div>
+    </div>
+  </footer>
+  <script src="../../../../shared/scripts/app.js"></script>
+</body>
+</html>
