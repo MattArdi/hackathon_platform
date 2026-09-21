@@ -697,3 +697,139 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Milestone timeline (Challenge Info → Timeline / Key Dates) */
+.milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.milestone-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-text-disabled);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+.milestone-card.is-upcoming {
+  border-left-color: var(--color-brand-red);
+}
+
+.milestone-marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-disabled);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.milestone-card.is-upcoming .milestone-marker {
+  background: var(--color-brand-red);
+}
+
+.milestone-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.milestone-date {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.milestone-card strong {
+  font-size: var(--font-size-sm);
+}
+
+.milestone-card p {
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+/* Numbered rules (Challenge Info → Rules & Regulations) */
+.numbered-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.numbered-rule {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.numbered-rule .num {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-red);
+  line-height: 1;
+  min-width: 44px;
+}
+
+.numbered-rule h4 {
+  margin: 0 0 4px;
+}
+
+@media (max-width: 900px) {
+  .numbered-rules {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Download card (Rules & Regulations item 06: full Terms & Conditions) */
+.download-rule {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-top: 10px;
+  max-width: 480px;
+}
+
+.download-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-link);
+  color: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.download-card__meta {
+  flex: 1;
+}
+
+.download-card__meta strong {
+  display: block;
+  font-size: var(--font-size-sm);
+}
+
+.download-card__meta span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
