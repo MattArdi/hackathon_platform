@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Info Iteration 2 | Design Draft</title>
+  <link rel="stylesheet" href="../../../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../index.html" class="site-header__logo">Meridian Logistics <span>Open Challenge</span><small>Presented with EnterpriseSG &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <div class="site-header__right">
+        <a href="../challenge-info.html" class="btn btn-secondary">&larr; Back to live Challenge Info</a>
+      </div>
+    </div>
+  </header>
+  
+  <style>
+.stepper { display: flex; position: relative; margin-top: 8px; }
+.stepper::before { content: ""; position: absolute; top: 15px; left: 0; right: 0; height: 2px; background: var(--color-border); z-index: 0; }
+.step { flex: 1; text-align: center; position: relative; z-index: 1; padding: 0 4px; }
+.step-circle { width: 32px; height: 32px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-text-disabled); color: var(--color-text-disabled); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-weight: var(--font-weight-bold); font-size: var(--font-size-sm); }
+.step.is-done .step-circle { background: var(--color-text-disabled); border-color: var(--color-text-disabled); color: var(--color-surface); }
+.step.is-next .step-circle { background: var(--color-brand-red); border-color: var(--color-brand-red); color: var(--color-surface); }
+.step-date { font-size: 12px; color: var(--color-text-muted); }
+.step-label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); margin-top: 2px; }
+@media (max-width: 900px) {
+  .stepper { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .stepper::before { display: none; }
+  .step { text-align: left; display: flex; gap: 12px; align-items: center; }
+  .step-circle { margin: 0; }
+}
+.rules-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.rules-columns h4 { border-bottom: 2px solid var(--color-brand-red); padding-bottom: 8px; display: inline-block; }
+.rules-columns ul { padding-left: 18px; color: var(--color-text-secondary); }
+.rules-columns li { margin-bottom: 10px; }
+@media (max-width: 900px) { .rules-columns { grid-template-columns: 1fr; } }
+</style>
+  <main>
+    
+    <section class="content-section" style="padding-top:32px;">
+      <div class="container">
+        <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt);">
+          <strong>Iteration 2 of 5 &middot; Horizontal Stepper.</strong> The timeline becomes a numbered progress stepper (a familiar 'you are here' pattern), collapsing to a vertical list on mobile. Rules split into two labeled columns - What's Required vs. Good to Know - instead of one undifferentiated list.
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="content-section">
+      <div class="container">
+        <h2>Timeline / Key Dates</h2>
+        <div class="stepper">
+        <div class="step is-done">
+          <div class="step-circle">1</div>
+          <div class="step-date">12 Jan 2026</div>
+          <div class="step-label">Registration opens</div>
+        </div>
+        <div class="step is-done">
+          <div class="step-circle">2</div>
+          <div class="step-date">22 Jan 2026</div>
+          <div class="step-label">Challenge briefing session</div>
+        </div>
+        <div class="step is-next">
+          <div class="step-circle">3</div>
+          <div class="step-date">6 Feb 2026</div>
+          <div class="step-label">Mid-challenge clinic</div>
+        </div>
+        <div class="step ">
+          <div class="step-circle">4</div>
+          <div class="step-date">6 Mar 2026, 6:00pm SGT</div>
+          <div class="step-label">Submission deadline</div>
+        </div>
+        <div class="step ">
+          <div class="step-circle">5</div>
+          <div class="step-date">9-20 Mar 2026</div>
+          <div class="step-label">Judging period</div>
+        </div>
+        <div class="step ">
+          <div class="step-circle">6</div>
+          <div class="step-date">27 Mar 2026</div>
+          <div class="step-label">Results announced</div>
+        </div></div>
+      </div>
+    </section>
+    <section id="rules" class="content-section">
+      <div class="container">
+        <h2>Rules &amp; Regulations</h2>
+        
+    <div class="rules-columns">
+      <div>
+        <h4>What's Required</h4>
+        <ul>
+          <li><strong>Eligibility:</strong> Open to Singapore-registered entities and individuals; teams of up to 5.</li>
+          <li><strong>Submission:</strong> A working demo, a short solution write-up, and a 3-minute video walkthrough - one submission per team per challenge statement.</li>
+          <li><strong>Deadline:</strong> No submissions accepted after the deadline. EnterpriseSG may extend it at its discretion, posted here and emailed to applicants.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Good to Know</h4>
+        <ul>
+          <li><strong>Data &amp; Privacy:</strong> Proposals and any personal data collected for the challenge are deleted from the platform 1 year after the submission deadline.</li>
+          <li><strong>IP &amp; Licensing:</strong> IP in each submission remains with the submitting team; Meridian Logistics receives a license to pilot shortlisted solutions.</li>
+        </ul>
+      </div>
+    </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>Design iteration &middot; not linked from the live site</div>
+      <div class="footer-links"><a href="../challenge-info.html">Live Challenge Info</a><a href="../index.html">Home</a></div>
+    </div>
+  </footer>
+  <script src="../../../../shared/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Info Iteration 4 | Design Draft</title>
+  <link rel="stylesheet" href="../../../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../index.html" class="site-header__logo">Meridian Logistics <span>Open Challenge</span><small>Presented with EnterpriseSG &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <div class="site-header__right">
+        <a href="../challenge-info.html" class="btn btn-secondary">&larr; Back to live Challenge Info</a>
+      </div>
+    </div>
+  </header>
+  
+  <style>
+.zigzag { display: grid; grid-template-columns: 1fr 32px 1fr; row-gap: 28px; position: relative; }
+.zigzag::before { content: ""; grid-column: 2; grid-row: 1 / -1; width: 2px; background: var(--color-border); margin: 0 auto; }
+.zig-marker { grid-column: 2; width: 14px; height: 14px; border-radius: 50%; background: var(--color-brand-red); align-self: start; margin: 6px auto 0; z-index: 1; }
+.zig-content { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 14px 18px; }
+.zig-left { grid-column: 1; }
+.zig-right { grid-column: 3; }
+.zig-date { font-size: 12px; color: var(--color-text-muted); font-weight: var(--font-weight-medium); }
+@media (max-width: 700px) {
+  .zigzag { grid-template-columns: 24px 1fr; }
+  .zig-marker { grid-column: 1; }
+  .zig-left, .zig-right { grid-column: 2; }
+}
+.rules-accordion .accordion-item__trigger { font-weight: var(--font-weight-bold); }
+.rule-count { font-size: 12px; color: var(--color-text-muted); font-weight: var(--font-weight-regular); margin-left: 8px; }
+</style>
+  <main>
+    
+    <section class="content-section" style="padding-top:32px;">
+      <div class="container">
+        <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt);">
+          <strong>Iteration 4 of 5 &middot; Zigzag Timeline + Grouped Accordion.</strong> The timeline alternates left/right along a center line - a common 'process' visual that reads as more editorial than a plain list. Rules collapse into a grouped accordion by category, so the page shows five short headings instead of one wall of six bullets.
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="content-section">
+      <div class="container">
+        <h2>Timeline / Key Dates</h2>
+        <div class="zigzag"><div class="zig-content zig-left" style="grid-row:1"><div class="zig-date">12 Jan 2026</div><strong>Registration opens</strong><p class="text-secondary mt-0">Applications open to all Singapore-registered teams.</p></div><div class="zig-marker" style="grid-row:1"></div><div class="zig-right" style="grid-row:1"></div><div class="zig-left" style="grid-row:2"></div><div class="zig-marker" style="grid-row:2"></div><div class="zig-content zig-right" style="grid-row:2"><div class="zig-date">22 Jan 2026</div><strong>Challenge briefing session</strong><p class="text-secondary mt-0">Meridian walks through the three challenge statements and Q&A.</p></div><div class="zig-content zig-left" style="grid-row:3"><div class="zig-date">6 Feb 2026</div><strong>Mid-challenge clinic</strong><p class="text-secondary mt-0">Optional 1:1 slots with Meridian's ops team to sanity-check your approach.</p></div><div class="zig-marker" style="grid-row:3"></div><div class="zig-right" style="grid-row:3"></div><div class="zig-left" style="grid-row:4"></div><div class="zig-marker" style="grid-row:4"></div><div class="zig-content zig-right" style="grid-row:4"><div class="zig-date">6 Mar 2026, 6:00pm SGT</div><strong>Submission deadline</strong><p class="text-secondary mt-0">Working demo, solution write-up, and 3-minute video due.</p></div><div class="zig-content zig-left" style="grid-row:5"><div class="zig-date">9-20 Mar 2026</div><strong>Judging period</strong><p class="text-secondary mt-0">Meridian and EnterpriseSG score every submission against the published criteria.</p></div><div class="zig-marker" style="grid-row:5"></div><div class="zig-right" style="grid-row:5"></div><div class="zig-left" style="grid-row:6"></div><div class="zig-marker" style="grid-row:6"></div><div class="zig-content zig-right" style="grid-row:6"><div class="zig-date">27 Mar 2026</div><strong>Results announced</strong><p class="text-secondary mt-0">Winners announced; pilot kick-off with Meridian's operations team.</p></div></div>
+      </div>
+    </section>
+    <section id="rules" class="content-section">
+      <div class="container">
+        <h2>Rules &amp; Regulations</h2>
+        <div class="accordion rules-accordion"><div class="accordion-item is-open"><button class="accordion-item__trigger">Eligibility<span class="rule-count">1 rule</span></button><div class="accordion-item__panel"><p>Open to Singapore-registered entities and individuals; teams of up to 5.</p></div></div><div class="accordion-item"><button class="accordion-item__trigger">Submission Requirements<span class="rule-count">1 rule</span></button><div class="accordion-item__panel"><p>A working demo, a short solution write-up, and a 3-minute video walkthrough - one submission per team per challenge statement.</p></div></div><div class="accordion-item"><button class="accordion-item__trigger">Deadline Policy<span class="rule-count">1 rule</span></button><div class="accordion-item__panel"><p>No submissions accepted after the deadline. EnterpriseSG may extend it at its discretion, posted here and emailed to applicants.</p></div></div><div class="accordion-item"><button class="accordion-item__trigger">Data &amp; Privacy<span class="rule-count">1 rule</span></button><div class="accordion-item__panel"><p>Proposals and any personal data collected for the challenge are deleted from the platform 1 year after the submission deadline.</p></div></div><div class="accordion-item"><button class="accordion-item__trigger">IP &amp; Licensing<span class="rule-count">1 rule</span></button><div class="accordion-item__panel"><p>IP in each submission remains with the submitting team; Meridian Logistics receives a license to pilot shortlisted solutions.</p></div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>Design iteration &middot; not linked from the live site</div>
+      <div class="footer-links"><a href="../challenge-info.html">Live Challenge Info</a><a href="../index.html">Home</a></div>
+    </div>
+  </footer>
+  <script src="../../../../shared/scripts/app.js"></script>
+</body>
+</html>

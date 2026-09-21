@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Challenge Info Iteration 1 | Design Draft</title>
+  <link rel="stylesheet" href="../../../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="../index.html" class="site-header__logo">Meridian Logistics <span>Open Challenge</span><small>Presented with EnterpriseSG &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <div class="site-header__right">
+        <a href="../challenge-info.html" class="btn btn-secondary">&larr; Back to live Challenge Info</a>
+      </div>
+    </div>
+  </header>
+  
+  <style>
+.milestone-list { display: flex; flex-direction: column; gap: 14px; }
+.milestone-card { display: flex; gap: 16px; align-items: flex-start; background: var(--color-surface); border: 1px solid var(--color-border); border-left: 4px solid var(--color-text-disabled); border-radius: var(--radius-md); padding: 16px 20px; }
+.milestone-card.is-upcoming { border-left-color: var(--color-brand-red); }
+.milestone-marker { width: 14px; height: 14px; border-radius: 50%; background: var(--color-text-disabled); margin-top: 4px; flex-shrink: 0; }
+.milestone-card.is-upcoming .milestone-marker { background: var(--color-brand-red); }
+.milestone-date { font-size: var(--font-size-sm); color: var(--color-text-muted); font-weight: var(--font-weight-medium); margin-bottom: 2px; }
+.milestone-card h4 { margin: 2px 0 4px; }
+.rule-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.rule-card { background: var(--color-surface); border: 1px solid var(--color-border); border-top: 3px solid var(--color-brand-red); border-radius: var(--radius-md); padding: 18px 20px; }
+.rule-card h4 { margin: 0 0 8px; }
+@media (max-width: 900px) { .rule-card-grid { grid-template-columns: 1fr; } }
+</style>
+  <main>
+    
+    <section class="content-section" style="padding-top:32px;">
+      <div class="container">
+        <div class="alert" style="background:var(--color-surface-tint); color:var(--color-link-alt);">
+          <strong>Iteration 1 of 5 &middot; Milestone Cards.</strong> Each timeline entry becomes a card with a status badge and short description instead of a bare date + label. Rules become a grid of titled category cards instead of one long bullet list.
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="content-section">
+      <div class="container">
+        <h2>Timeline / Key Dates</h2>
+        <div class="milestone-list">
+        <div class="milestone-card">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">12 Jan 2026 &nbsp;<span class="badge badge-closed">Done</span></div>
+            <h4>Registration opens</h4>
+            <p class="text-secondary mt-0">Applications open to all Singapore-registered teams.</p>
+          </div>
+        </div>
+        <div class="milestone-card">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">22 Jan 2026 &nbsp;<span class="badge badge-closed">Done</span></div>
+            <h4>Challenge briefing session</h4>
+            <p class="text-secondary mt-0">Meridian walks through the three challenge statements and Q&A.</p>
+          </div>
+        </div>
+        <div class="milestone-card is-upcoming">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">6 Feb 2026 &nbsp;<span class="badge badge-open">Upcoming</span></div>
+            <h4>Mid-challenge clinic</h4>
+            <p class="text-secondary mt-0">Optional 1:1 slots with Meridian's ops team to sanity-check your approach.</p>
+          </div>
+        </div>
+        <div class="milestone-card is-upcoming">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">6 Mar 2026, 6:00pm SGT &nbsp;<span class="badge badge-open">Upcoming</span></div>
+            <h4>Submission deadline</h4>
+            <p class="text-secondary mt-0">Working demo, solution write-up, and 3-minute video due.</p>
+          </div>
+        </div>
+        <div class="milestone-card is-upcoming">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">9-20 Mar 2026 &nbsp;<span class="badge badge-open">Upcoming</span></div>
+            <h4>Judging period</h4>
+            <p class="text-secondary mt-0">Meridian and EnterpriseSG score every submission against the published criteria.</p>
+          </div>
+        </div>
+        <div class="milestone-card is-upcoming">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-date">27 Mar 2026 &nbsp;<span class="badge badge-open">Upcoming</span></div>
+            <h4>Results announced</h4>
+            <p class="text-secondary mt-0">Winners announced; pilot kick-off with Meridian's operations team.</p>
+          </div>
+        </div></div>
+      </div>
+    </section>
+    <section id="rules" class="content-section">
+      <div class="container">
+        <h2>Rules &amp; Regulations</h2>
+        <div class="rule-card-grid"><div class="rule-card"><h4>Eligibility</h4><p class="text-secondary">Open to Singapore-registered entities and individuals; teams of up to 5.</p></div><div class="rule-card"><h4>Submission Requirements</h4><p class="text-secondary">A working demo, a short solution write-up, and a 3-minute video walkthrough - one submission per team per challenge statement.</p></div><div class="rule-card"><h4>Deadline Policy</h4><p class="text-secondary">No submissions accepted after the deadline. EnterpriseSG may extend it at its discretion, posted here and emailed to applicants.</p></div><div class="rule-card"><h4>Data &amp; Privacy</h4><p class="text-secondary">Proposals and any personal data collected for the challenge are deleted from the platform 1 year after the submission deadline.</p></div><div class="rule-card"><h4>IP &amp; Licensing</h4><p class="text-secondary">IP in each submission remains with the submitting team; Meridian Logistics receives a license to pilot shortlisted solutions.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>Design iteration &middot; not linked from the live site</div>
+      <div class="footer-links"><a href="../challenge-info.html">Live Challenge Info</a><a href="../index.html">Home</a></div>
+    </div>
+  </footer>
+  <script src="../../../../shared/scripts/app.js"></script>
+</body>
+</html>
