@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Dashboard | EnterpriseSG Open Innovation Challenge</title>
+  <title>My Dashboard | Meridian Logistics Open Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
   <link rel="stylesheet" href="../../../shared/styles/layout.css" />
@@ -13,8 +13,10 @@
 <body>
   <header class="site-header">
     <div class="container-wide">
-      <a href="../public/index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
-      <nav class="site-nav"><a href="../public/index.html">Home</a><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="dashboard.html" aria-current="page">My Dashboard</a><a href="messages.html">Messages</a></nav><div class="site-header__actions"><a href="account.html">My Account</a><a href="../public/login.html" class="btn btn-secondary">Log Out</a></div>
+      <a href="../public/index.html" class="site-header__logo">Meridian Logistics <span>Open Challenge</span><small>Presented with EnterpriseSG &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <div class="site-header__right">
+        <nav class="site-nav"><a href="../public/index.html">Home</a><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="dashboard.html" aria-current="page">My Dashboard</a><a href="messages.html">Messages</a></nav><div class="site-header__actions"><a href="account.html">My Account</a><a href="../public/login.html" class="btn btn-secondary">Log Out</a></div>
+      </div>
     </div>
   </header>
   
@@ -28,11 +30,11 @@
             <button class="tabs__tab" data-tab="submit">Proposal Submission</button>
             <button class="tabs__tab" data-tab="draft">Draft Proposal</button>
             <button class="tabs__tab" data-tab="submitted">Submitted Proposal</button>
-            <button class="tabs__tab" data-tab="events">My Registered Events</button>
+            <button class="tabs__tab" data-tab="events">My Events &amp; Recordings</button>
           </div>
 
           <div class="tabs__panel is-active" data-panel="overview">
-            <div class="grid grid-2">
+            <div class="grid grid-2" style="margin-bottom:28px;">
               <div class="card card-elevated">
                 <span class="badge badge-open">6 days left</span>
                 <h3>Submission deadline</h3>
@@ -44,22 +46,54 @@
                 <p class="text-secondary">Your draft was last saved 2 days ago.</p>
               </div>
             </div>
+            <h3>Your challenge timeline</h3>
+        <ul class="timeline">
+          <li class="is-past"><div class="timeline__date">12 Jan 2026</div>Registration opened</li>
+          <li class="is-past"><div class="timeline__date">22 Jan 2026</div>Challenge briefing session (attended)</li>
+          <li><div class="timeline__date">6 Feb 2026, 3:00pm SGT</div>Mid-challenge clinic - you're registered</li>
+          <li><div class="timeline__date">6 Mar 2026, 6:00pm SGT</div>Submission deadline for CS1 &middot; Predictive Container Yard Congestion</li>
+          <li><div class="timeline__date">9-20 Mar 2026</div>Judging period</li>
+          <li><div class="timeline__date">27 Mar 2026</div>Results announced &amp; pilot kick-off</li>
+        </ul>
           </div>
 
           <div class="tabs__panel" data-panel="submit">
-            <form style="max-width:560px;">
-              <div class="form-field"><label>Team name</label><input type="text" value="Portside Analytics" /></div>
-              <div class="form-field"><label>Challenge statement</label>
-                <select><option>CS1 &middot; Predictive Container Yard Congestion</option><option>CS2 &middot; Last-Mile Route Optimization</option><option>CS3 &middot; Supply Chain Risk Alerting</option></select>
+            <div class="submission-layout">
+              <div class="submission-form-card">
+                <h3>Submit your proposal</h3>
+                <form>
+                  <div class="form-field"><label>Team name</label><input type="text" value="Portside Analytics" /></div>
+                  <div class="form-field"><label>Challenge statement</label>
+                    <select><option>CS1 &middot; Predictive Container Yard Congestion</option><option>CS2 &middot; Last-Mile Route Optimization</option><option>CS3 &middot; Supply Chain Risk Alerting</option></select>
+                  </div>
+                  <div class="form-field"><label>Solution title</label><input type="text" placeholder="Name your solution" /></div>
+                  <div class="form-field"><label>Solution description</label><textarea rows="5" placeholder="Describe your approach..."></textarea></div>
+                  <div class="form-field"><label>Supporting documents</label><input type="file" /><div class="form-field__hint">PDF, up to 20MB.</div></div>
+                  <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">Save Draft</button>
+                    <button type="button" class="btn btn-primary">Submit Proposal</button>
+                  </div>
+                </form>
               </div>
-              <div class="form-field"><label>Solution title</label><input type="text" placeholder="Name your solution" /></div>
-              <div class="form-field"><label>Solution description</label><textarea rows="5" placeholder="Describe your approach..."></textarea></div>
-              <div class="form-field"><label>Supporting documents</label><input type="file" /><div class="form-field__hint">PDF, up to 20MB.</div></div>
-              <div class="form-actions">
-                <button type="button" class="btn btn-secondary">Save Draft</button>
-                <button type="button" class="btn btn-primary">Submit Proposal</button>
+              <div class="submission-sidebar">
+                <div class="card">
+                  <h4>Challenge statement</h4>
+                  <p><strong>CS1 &middot; Predictive Container Yard Congestion</strong></p>
+                  <p class="text-secondary">Forecast yard congestion 4-12 hours ahead using gate-in/out and berth schedule data.</p>
+                </div>
+                <div class="card">
+                  <h4>Deadline</h4>
+                  <p><strong>6 Mar 2026, 6:00pm SGT</strong></p>
+                  <p class="text-secondary">6 days left</p>
+                </div>
+                <div class="card">
+                  <h4>Tips</h4>
+                  <p class="text-secondary">Keep your demo video under 3 minutes.</p>
+                  <p class="text-secondary">Attach your solution write-up as a single PDF.</p>
+                  <p class="text-secondary">You can save a draft and come back anytime before the deadline.</p>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
 
           <div class="tabs__panel" data-panel="draft">
@@ -82,10 +116,47 @@
           </div>
 
           <div class="tabs__panel" data-panel="events">
-            <div class="card">
+            <h3 class="mt-0">My registered events</h3>
+            <div class="card" style="margin-bottom:24px;">
               <strong>Mid-challenge clinic</strong>
-              <p class="text-secondary mt-0">6 Feb 2026, 3:00–4:30pm SGT &middot; registered</p>
+              <p class="text-secondary mt-0">6 Feb 2026, 3:00-4:30pm SGT &middot; registered</p>
             </div>
+            <p><a href="../public/challenge-info.html#briefing-sessions">Browse &amp; register for more events &rarr;</a></p>
+
+            <h3>Recordings</h3>
+        <div class="carousel">
+          <div class="carousel__track">
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Challenge briefing session</strong>
+            <span>22 Jan 2026 &middot; 54 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Mid-challenge clinic</strong>
+            <span>6 Feb 2026 &middot; 38 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Meridian Ops 101: how our yards work</strong>
+            <span>12 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Data walkthrough: gate &amp; berth logs</strong>
+            <span>21 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Fireside chat with past challenge winners</strong>
+            <span>29 min</span>
+          </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" data-carousel="prev" aria-label="Previous">&larr;</button>
+            <button class="carousel__btn" data-carousel="next" aria-label="Next">&rarr;</button>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -94,7 +165,7 @@
 
   <footer class="site-footer">
     <div class="container-wide">
-      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div>&copy; 2026 Meridian Logistics Open Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
       <div class="footer-links"><a href="../public/challenge-info.html">Challenge Info</a><a href="../public/faqs.html">FAQs</a><a href="../public/privacy.html">Privacy &amp; Data Retention</a></div>
     </div>
   </footer>

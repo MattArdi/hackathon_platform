@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | EnterpriseSG Challenge Console</title>
+  <link rel="stylesheet" href="../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="login.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <div class="site-header__right">
+        
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container" style="max-width:420px;">
+        <h2>Challenge Console Login</h2>
+        <p class="text-muted">Demand driver and EnterpriseSG accounts are provisioned by EnterpriseSG, not self-registered.</p>
+        <form onsubmit="event.preventDefault();">
+          <div class="form-field"><label>Email</label><input type="email" placeholder="you@organization.sg" /></div>
+          <div class="form-field"><label>Password</label><input type="password" /></div>
+        </form>
+        <div class="stacked-buttons">
+          <a href="demand-driver/control.html" class="btn btn-secondary">Continue as Demand Driver</a>
+          <a href="esg/my-hackathons.html" class="btn btn-primary">Continue as EnterpriseSG</a>
+        </div>
+        <p class="text-muted" style="margin-top:20px;">Applicant or solution provider? <a href="../client-facing/public/login.html">Go to the challenge site</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../shared/scripts/app.js"></script>
+</body>
+</html>

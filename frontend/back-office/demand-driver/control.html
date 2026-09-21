@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Hackathons | EnterpriseSG Challenge Console</title>
+  <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
+  <link rel="stylesheet" href="../../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../../shared/styles/layout.css" />
+  <link rel="stylesheet" href="../../../shared/styles/patterns.css" />
+  <link rel="stylesheet" href="../../../shared/styles/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="control.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
+      <div class="site-header__right">
+        <nav class="site-nav"><a href="control.html" aria-current="page">Control Panel</a></nav><div class="site-header__actions"><a href="notifications.html">Notifications</a><a href="account.html">Account</a><a href="../login.html" class="btn btn-secondary">Log Out</a></div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="content-section">
+      <div class="container-wide">
+        <div class="flex-between">
+          <h2 class="mt-0">My Hackathons</h2>
+          <button type="button" class="btn btn-primary">+ New Hackathon</button>
+        </div>
+        <p class="text-muted">Showing hackathons run by Meridian Logistics Pte Ltd only. Click a row for full detail, proposals, and participants.</p>
+        <table class="data-table data-table--clickable">
+          <thead><tr><th>Hackathon</th><th>Demand driver</th><th>Status</th><th>Deadline</th><th>Proposals</th></tr></thead>
+          <tbody>
+            <tr class="data-table--clickable-row" data-modal-target="modal-smart-logistics"><td>Smart Logistics &amp; Supply Chain Resilience</td><td>Meridian Logistics Pte Ltd</td><td><span class="badge badge-open">Live</span></td><td>6 Mar 2026</td><td>27</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-smart-logistics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Live</span>
+      <h2 class="mt-0">Smart Logistics &amp; Supply Chain Resilience</h2>
+      <p class="text-secondary"><strong>Meridian Logistics Pte Ltd</strong> &middot; deadline 6 Mar 2026</p>
+      <div class="grid grid-3" style="margin:20px 0;"><div class="card card-elevated"><div class="stat-bar__value">27</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">12</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
+      <p class="text-secondary"><strong>Participants:</strong> 27 participants across 9 teams</p>
+      <h3>Submitted proposals</h3>
+      <table class="data-table">
+        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Submitted</th></tr></thead>
+        <tbody><tr><td>Portside Analytics</td><td>CS1 &middot; Yard Congestion</td><td><span class="badge badge-closed">Submitted</span></td><td>4 Mar 2026</td></tr><tr><td>RouteWise</td><td>CS2 &middot; Last-Mile Routing</td><td><span class="badge badge-draft">Draft</span></td><td>-</td></tr><tr><td>Beacon Risk Labs</td><td>CS3 &middot; Risk Alerting</td><td><span class="badge badge-closed">Submitted</span></td><td>3 Mar 2026</td></tr></tbody>
+      </table>
+      <div class="form-actions"><button type="button" class="btn btn-secondary">Download Weekly Report</button></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div>EnterpriseSG Challenge Console &middot; internal use only</div>
+      <div class="footer-links"><a href="../../client-facing/public/index.html">View public site</a></div>
+    </div>
+  </footer>
+  <script src="../../../shared/scripts/app.js"></script>
+</body>
+</html>

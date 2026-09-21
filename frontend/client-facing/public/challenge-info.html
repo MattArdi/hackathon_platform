@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Challenge Info | EnterpriseSG Open Innovation Challenge</title>
+  <title>Challenge Info | Meridian Logistics Open Challenge</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
   <link rel="stylesheet" href="../../../shared/styles/layout.css" />
@@ -13,8 +13,10 @@
 <body>
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="site-header__logo">EnterpriseSG <span>Open Innovation Challenge</span><small>2026 &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
-      <nav class="site-nav"><a href="index.html">Home</a><a href="challenge-info.html" aria-current="page">Challenge Info</a><a href="faqs.html">FAQs</a></nav><div class="site-header__actions"><a href="login.html" class="btn btn-primary">Login / Register</a></div>
+      <a href="index.html" class="site-header__logo">Meridian Logistics <span>Open Challenge</span><small>Presented with EnterpriseSG &middot; Smart Logistics &amp; Supply Chain Resilience</small></a>
+      <div class="site-header__right">
+        <nav class="site-nav"><a href="index.html">Home</a><a href="challenge-info.html" aria-current="page">Challenge Info</a><a href="faqs.html">FAQs</a></nav><div class="site-header__actions"><a href="login.html" class="btn btn-primary">Login / Register</a></div>
+      </div>
     </div>
   </header>
   
@@ -41,21 +43,41 @@
     <section id="challenge-statements" class="content-section">
       <div class="container">
         <h2>Challenge Statements</h2>
-        <div class="grid grid-3">
-          <div class="card card-elevated">
-            <span class="badge badge-open">Open</span>
-            <h3>CS1 &middot; Predictive Container Yard Congestion</h3>
-            <p class="text-secondary">Forecast yard congestion 4–12 hours ahead using gate-in/out and berth schedule data, so yard planners can re-sequence moves before a bottleneck forms.</p>
+        
+        <div class="drawer-item is-open">
+          <button class="drawer-item__trigger">
+            <span class="drawer-item__title"><span class="badge badge-open">Open</span>CS1 &middot; Predictive Container Yard Congestion</span>
+            <span class="drawer-item__chevron">&#9660;</span>
+          </button>
+          <div class="drawer-item__panel">
+            <p class="text-secondary">Forecast yard congestion 4-12 hours ahead using gate-in/out and berth schedule data, so yard planners can re-sequence moves before a bottleneck forms.</p>
+            <p class="text-secondary"><strong>Data provided:</strong> 12 months of anonymized gate and berth schedule logs.</p>
+            <p class="text-secondary"><strong>Pilot scope:</strong> Meridian's Pasir Panjang yard, 8-week trial with the winning team.</p>
+            <a href="../applicant/dashboard.html" class="btn btn-primary">Apply for CS1</a>
           </div>
-          <div class="card card-elevated">
-            <span class="badge badge-open">Open</span>
-            <h3>CS2 &middot; Last-Mile Route Optimization</h3>
+        </div>
+        <div class="drawer-item">
+          <button class="drawer-item__trigger">
+            <span class="drawer-item__title"><span class="badge badge-open">Open</span>CS2 &middot; Last-Mile Route Optimization</span>
+            <span class="drawer-item__chevron">&#9660;</span>
+          </button>
+          <div class="drawer-item__panel">
             <p class="text-secondary">Re-plan last-mile delivery routes in real time against live traffic and delivery-window changes for a fleet of ~120 vehicles.</p>
+            <p class="text-secondary"><strong>Data provided:</strong> Historical route and delivery-window data for 3 distribution hubs.</p>
+            <p class="text-secondary"><strong>Pilot scope:</strong> Meridian's East Coast distribution hub, 8-week trial with the winning team.</p>
+            <a href="../applicant/dashboard.html" class="btn btn-primary">Apply for CS2</a>
           </div>
-          <div class="card card-elevated">
-            <span class="badge badge-open">Open</span>
-            <h3>CS3 &middot; Supply Chain Risk Alerting</h3>
+        </div>
+        <div class="drawer-item">
+          <button class="drawer-item__trigger">
+            <span class="drawer-item__title"><span class="badge badge-open">Open</span>CS3 &middot; Supply Chain Risk Alerting</span>
+            <span class="drawer-item__chevron">&#9660;</span>
+          </button>
+          <div class="drawer-item__panel">
             <p class="text-secondary">Surface upstream supplier and shipping-lane risk (weather, port congestion, customs delays) as an early-warning feed for ops planners.</p>
+            <p class="text-secondary"><strong>Data provided:</strong> Supplier and shipping-lane reference data; public weather and port-status feeds.</p>
+            <p class="text-secondary"><strong>Pilot scope:</strong> Meridian's ops planning team, 8-week trial with the winning team.</p>
+            <a href="../applicant/dashboard.html" class="btn btn-primary">Apply for CS3</a>
           </div>
         </div>
       </div>
@@ -69,7 +91,7 @@
           <li class="is-past"><div class="timeline__date">22 Jan 2026</div>Challenge briefing session (Meridian Logistics HQ + livestream)</li>
           <li><div class="timeline__date">6 Feb 2026</div>Mid-challenge clinic - optional 1:1 slots with Meridian's ops team</li>
           <li><div class="timeline__date">6 Mar 2026, 6:00pm SGT</div>Submission deadline</li>
-          <li><div class="timeline__date">9–20 Mar 2026</div>Judging period</li>
+          <li><div class="timeline__date">9-20 Mar 2026</div>Judging period</li>
           <li><div class="timeline__date">27 Mar 2026</div>Results announced &amp; pilot kick-off</li>
         </ul>
       </div>
@@ -78,19 +100,50 @@
     <section id="briefing-sessions" class="content-section">
       <div class="container">
         <h2>Briefing Sessions &amp; Recordings</h2>
-        <div class="card" style="margin-bottom:16px;">
+        <div class="card" style="margin-bottom:24px;">
           <div class="flex-between">
             <div>
               <strong>Mid-challenge clinic</strong>
-              <p class="text-secondary mt-0">6 Feb 2026, 3:00–4:30pm SGT &middot; Zoom &middot; optional 1:1 slots with Meridian's ops team</p>
+              <p class="text-secondary mt-0">6 Feb 2026, 3:00-4:30pm SGT &middot; Zoom &middot; optional 1:1 slots with Meridian's ops team</p>
             </div>
             <a href="../applicant/dashboard.html" class="btn btn-primary">Register</a>
           </div>
         </div>
         <h3>Recordings</h3>
-        <ul>
-          <li><a href="#">Challenge briefing session - 22 Jan 2026 (54 min)</a></li>
-        </ul>
+        
+        <div class="carousel">
+          <div class="carousel__track">
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Challenge briefing session</strong>
+            <span>22 Jan 2026 &middot; 54 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Mid-challenge clinic</strong>
+            <span>6 Feb 2026 &middot; 38 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Meridian Ops 101: how our yards work</strong>
+            <span>12 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Data walkthrough: gate &amp; berth logs</strong>
+            <span>21 min</span>
+          </div>
+          <div class="carousel__item">
+            <div class="placeholder-image placeholder-image--thumb">Recording thumbnail</div>
+            <strong>Fireside chat with past challenge winners</strong>
+            <span>29 min</span>
+          </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" data-carousel="prev" aria-label="Previous">&larr;</button>
+            <button class="carousel__btn" data-carousel="next" aria-label="Next">&rarr;</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -124,7 +177,7 @@
 
   <footer class="site-footer">
     <div class="container-wide">
-      <div>&copy; 2026 EnterpriseSG Open Innovation Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
+      <div>&copy; 2026 Meridian Logistics Open Challenge &middot; oichallenge@enterprisesg.gov.sg</div>
       <div class="footer-links"><a href="challenge-info.html">Challenge Info</a><a href="faqs.html">FAQs</a><a href="privacy.html">Privacy &amp; Data Retention</a></div>
     </div>
   </footer>

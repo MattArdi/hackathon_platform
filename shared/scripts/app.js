@@ -77,10 +77,48 @@ function initChatbotWidget() {
   });
 }
 
+function initDrawers() {
+  document.querySelectorAll(".drawer-item__trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      trigger.closest(".drawer-item").classList.toggle("is-open");
+    });
+  });
+}
+
+function initCarousels() {
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".carousel__track");
+    const prev = carousel.querySelector('[data-carousel="prev"]');
+    const next = carousel.querySelector('[data-carousel="next"]');
+    const scrollBy = () => Math.max(track.clientWidth * 0.6, 260);
+    if (prev) prev.addEventListener("click", () => track.scrollBy({ left: -scrollBy(), behavior: "smooth" }));
+    if (next) next.addEventListener("click", () => track.scrollBy({ left: scrollBy(), behavior: "smooth" }));
+  });
+}
+
+function initModals() {
+  document.querySelectorAll("[data-modal-target]").forEach((opener) => {
+    opener.addEventListener("click", () => {
+      const modal = document.getElementById(opener.dataset.modalTarget);
+      if (modal) modal.classList.add("is-open");
+    });
+  });
+  document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay || e.target.closest(".modal__close")) {
+        overlay.classList.remove("is-open");
+      }
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initAccordions();
   initTabs();
   initSectionNavScrollSpy();
   initChatDemo();
   initChatbotWidget();
+  initDrawers();
+  initCarousels();
+  initModals();
 });

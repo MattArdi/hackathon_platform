@@ -25,10 +25,12 @@
 .btn-secondary {
   background: transparent;
   color: var(--color-brand-red);
+  border: 1px solid var(--color-brand-red);
 }
 
 .btn-secondary:hover {
-  color: var(--color-brand-red-hover);
+  color: var(--color-surface);
+  background: var(--color-brand-red);
 }
 
 .card {
