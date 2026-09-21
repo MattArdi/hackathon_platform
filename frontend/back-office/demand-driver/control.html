@@ -100,27 +100,63 @@
       <div data-tabs>
         <div class="tabs__list">
           <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="description">Description</button>
           <button class="tabs__tab" data-tab="participants">Participants</button>
           <button class="tabs__tab" data-tab="timeline">Timeline</button>
-          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="statements">Statements</button>
           <button class="tabs__tab" data-tab="content">Content</button>
         </div>
         <div class="tabs__panel is-active" data-panel="overview">
-      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
-      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
-      <h4>Description</h4>
-      <div class="form-field"><textarea rows="4">Meridian Logistics operates container yards and last-mile distribution hubs across Singapore. This Open Innovation Challenge, co-sponsored with three other marine and logistics partners, invites solution providers to prototype fixes for yard congestion, last-mile routing, and supply-chain risk visibility.</textarea></div>
-      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
-      <h4>Demand drivers</h4>
+      <div class="grid grid-3" style="margin-bottom:20px;"><div class="card card-elevated"><div class="stat-bar__value">27</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">12</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
+
+      <h4 class="mt-0">Demand drivers</h4>
       <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Blue Horizon Shipping Line</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
-      <div class="grid grid-3" style="margin:20px 0;">
-        <div class="card card-elevated"><div class="stat-bar__value">27</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">12</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Participants by status</h4>
+      <p><span class="badge badge-closed">2 Proposal Submitted</span> <span class="badge badge-open">1 Admitted to OIC</span> <span class="badge badge-draft">1 Application Pending Review</span> <span class="badge badge-rejected">1 Rejected from OIC</span> </p>
+
+      <hr class="tab-divider" />
+
+      <div class="grid grid-2">
+        <div>
+          <h4 class="mt-0">Next up on the timeline</h4>
+          <p class="text-secondary"><strong>Registration opens</strong><br />12 Jan 2026</p>
+        </div>
+        <div>
+          <h4 class="mt-0">Challenge statements</h4>
+          <p class="text-secondary">3 published: CS1, CS2, CS3</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h4>Content</h4>
+          <p class="text-secondary">Terms_and_Conditions_Placeholder.docx &middot; 2 recording(s) &middot; 2 FAQ(s)</p>
+        </div>
+        <div>
+          <h4>Status</h4>
+          <p class="text-secondary">Live &middot; deadline 6 Mar 2026</p>
+        </div>
       </div></div>
+        <div class="tabs__panel" data-panel="description">
+      <h4 class="mt-0">Hero image</h4>
+      <div class="replace-preview" style="height:200px;">
+        <div class="placeholder-image" style="height:200px;">Current hero image</div>
+        <div class="replace-preview__overlay"><span class="icon">&#9998;</span>Replace image</div>
+      </div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Description</h4>
+      <div class="form-field"><textarea rows="4">Meridian Logistics operates container yards and last-mile distribution hubs across Singapore. This Open Innovation Challenge, co-sponsored with three other marine and logistics partners, invites solution providers to prototype fixes for yard congestion, last-mile routing, and supply-chain risk visibility.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div></div>
         <div class="tabs__panel" data-panel="participants">
-      <table class="data-table">
+      <table class="data-table data-table--clickable">
         <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
         <tbody>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-smart-logistics-portside-analytics">
           <td>Portside Analytics</td>
           <td>CS1</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -129,7 +165,7 @@
             <div class="progress-label">Submitted, awaiting review (75%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-smart-logistics-routewise">
           <td>RouteWise</td>
           <td>CS2</td>
           <td><span class="badge badge-open">Admitted to OIC</span></td>
@@ -138,7 +174,7 @@
             <div class="progress-label">Draft in progress (25%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-smart-logistics-beacon-risk-labs">
           <td>Beacon Risk Labs</td>
           <td>CS3</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -147,7 +183,7 @@
             <div class="progress-label">Submitted, awaiting review (75%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-smart-logistics-harborlight-systems">
           <td>Harborlight Systems</td>
           <td>CS1</td>
           <td><span class="badge badge-draft">Application Pending Review</span></td>
@@ -156,7 +192,7 @@
             <div class="progress-label">Application under review (0%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-smart-logistics-tidal-wave-analytics">
           <td>Tidal Wave Analytics</td>
           <td>CS2</td>
           <td><span class="badge badge-rejected">Rejected from OIC</span></td>
@@ -167,12 +203,63 @@
         </tr></tbody>
       </table></div>
         <div class="tabs__panel" data-panel="timeline">
-      <ul class="timeline"><li><div class="timeline__date">12 Jan 2026</div>Registration opens</li><li><div class="timeline__date">22 Jan 2026</div>Challenge briefing session</li><li><div class="timeline__date">6 Feb 2026</div>Mid-challenge clinic</li><li><div class="timeline__date">6 Mar 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">9-20 Mar 2026</div>Judging period</li><li><div class="timeline__date">27 Mar 2026</div>Results announced</li></ul>
-      <div class="card" style="margin-top:20px; max-width:480px;">
-        <h4 class="mt-0">Add new event</h4>
-        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
-        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      <div data-timeline-tab>
+        <div class="milestone-list">
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-smart-logistics-0">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">12 Jan 2026</span><span class="badge badge-closed">Done</span></div>
+            <strong>Registration opens</strong>
+            <p class="text-secondary">Applications open to all Singapore-registered teams.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-smart-logistics-1">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">22 Jan 2026</span><span class="badge badge-closed">Done</span></div>
+            <strong>Challenge briefing session</strong>
+            <p class="text-secondary">Meridian walks through the three challenge statements and Q&amp;A.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-smart-logistics-2">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">6 Feb 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Mid-challenge clinic</strong>
+            <p class="text-secondary">Optional 1:1 slots with Meridian's ops team to sanity-check your approach.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-smart-logistics-3">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">6 Mar 2026, 6:00pm SGT</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Submission deadline</strong>
+            <p class="text-secondary">Working demo, solution write-up, and 3-minute video due.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-smart-logistics-4">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">9-20 Mar 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Judging period</strong>
+            <p class="text-secondary">Meridian and EnterpriseSG score every submission against the published criteria.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-smart-logistics-5">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">27 Mar 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Results announced</strong>
+            <p class="text-secondary">Winners announced; pilot kick-off with Meridian's operations team.</p>
+          </div>
+        </div>
+        </div>
+        <div class="card" data-add-event style="margin-top:20px; max-width:480px;">
+          <h4 class="mt-0">Add new event</h4>
+          <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
+          <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        </div>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Container Yard Congestion</strong><p class="text-secondary mt-0">Forecast yard congestion 4-12 hours ahead using gate-in/out and berth schedule data.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Last-Mile Route Optimization</strong><p class="text-secondary mt-0">Re-plan last-mile delivery routes in real time against live traffic and delivery-window changes.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS3 &middot; Supply Chain Risk Alerting</strong><p class="text-secondary mt-0">Surface upstream supplier and shipping-lane risk as an early-warning feed for ops planners.</p></div>
@@ -184,17 +271,29 @@
       </div></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="download-card" style="margin-bottom:8px;">
+      <div class="replace-preview__file" style="max-width:480px;">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
       </div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
 
-      <h4>Recordings</h4>
-      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">22 Jan 2026 &middot; 54 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Mid-challenge clinic</span><span class="text-muted">6 Feb 2026 &middot; 38 min</span></div></div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Recordings</h4>
+      
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Challenge briefing session</strong><span>22 Jan 2026 &middot; 54 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Mid-challenge clinic</strong><span>6 Feb 2026 &middot; 38 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+
+      <hr class="tab-divider" />
 
       <h4>FAQs</h4>
       <div class="card" style="margin-bottom:10px;"><strong>Who can participate?</strong><p class="text-secondary mt-0">Any Singapore-registered company or individual forming a team of up to 5 people.</p><a href="#">Edit</a></div><div class="card" style="margin-bottom:10px;"><strong>Can I submit for more than one challenge statement?</strong><p class="text-secondary mt-0">Yes, as separate submissions per statement.</p><a href="#">Edit</a></div>
@@ -207,6 +306,172 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-participant-smart-logistics-portside-analytics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">Portside Analytics</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Smart Logistics &amp; Supply Chain Resilience</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Portside Analytics Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>4 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>team@portsideanalytics.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>We've built congestion-forecasting models for two other Southeast Asian ports and want to bring that to Meridian's yards.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Portside-Analytics-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-smart-logistics-routewise">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Admitted to OIC</span>
+      <h2 class="mt-0">RouteWise</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Smart Logistics &amp; Supply Chain Resilience</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>RouteWise Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>3 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>hello@routewise.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Founding team from a last-mile delivery startup, pivoting our routing engine toward port logistics.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-smart-logistics-beacon-risk-labs">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">Beacon Risk Labs</h2>
+      <p class="text-secondary">Applying for CS3 &middot; Smart Logistics &amp; Supply Chain Resilience</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Beacon Risk Labs Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>5 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>contact@beaconrisklabs.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Supply-chain risk analytics spinout from NUS; already work with two freight forwarders on lane risk scoring.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Beacon-Risk-Labs-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-smart-logistics-harborlight-systems">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-draft">Application Pending Review</span>
+      <h2 class="mt-0">Harborlight Systems</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Smart Logistics &amp; Supply Chain Resilience</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Harborlight Systems Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>2 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>info@harborlightsystems.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Two-person team building IoT sensors for yard equipment tracking.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-smart-logistics-tidal-wave-analytics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-rejected">Rejected from OIC</span>
+      <h2 class="mt-0">Tidal Wave Analytics</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Smart Logistics &amp; Supply Chain Resilience</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Tidal Wave Analytics Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>3 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>team@tidalwaveanalytics.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Data analytics consultancy applying with a general-purpose routing tool.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-0">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Registration opens" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="12 Jan 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Applications open to all Singapore-registered teams.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-1">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Challenge briefing session" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="22 Jan 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Meridian walks through the three challenge statements and Q&amp;A.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-2">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Mid-challenge clinic" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="6 Feb 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Optional 1:1 slots with Meridian's ops team to sanity-check your approach.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-3">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Submission deadline" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="6 Mar 2026, 6:00pm SGT" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Working demo, solution write-up, and 3-minute video due.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-4">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Judging period" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="9-20 Mar 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Meridian and EnterpriseSG score every submission against the published criteria.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-smart-logistics-5">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Results announced" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="27 Mar 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Winners announced; pilot kick-off with Meridian's operations team.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-maritime-digitalisation">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -216,27 +481,63 @@
       <div data-tabs>
         <div class="tabs__list">
           <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="description">Description</button>
           <button class="tabs__tab" data-tab="participants">Participants</button>
           <button class="tabs__tab" data-tab="timeline">Timeline</button>
-          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="statements">Statements</button>
           <button class="tabs__tab" data-tab="content">Content</button>
         </div>
         <div class="tabs__panel is-active" data-panel="overview">
-      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
-      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
-      <h4>Description</h4>
-      <div class="form-field"><textarea rows="4">Four marine operators and one shipyard are jointly sponsoring this challenge to bring predictive maintenance and digital crew management to their fleets. Submissions are now in the judging period.</textarea></div>
-      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
-      <h4>Demand drivers</h4>
+      <div class="grid grid-3" style="margin-bottom:20px;"><div class="card card-elevated"><div class="stat-bar__value">19</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
+
+      <h4 class="mt-0">Demand drivers</h4>
       <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Kestrel Tanker Group</span><span class="dd-tag">Anchorpoint Marine Services</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
-      <div class="grid grid-3" style="margin:20px 0;">
-        <div class="card card-elevated"><div class="stat-bar__value">19</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Participants by status</h4>
+      <p><span class="badge badge-closed">2 Proposal Submitted</span> <span class="badge badge-open">1 Admitted to OIC</span> <span class="badge badge-rejected">1 Rejected from OIC</span> </p>
+
+      <hr class="tab-divider" />
+
+      <div class="grid grid-2">
+        <div>
+          <h4 class="mt-0">Next up on the timeline</h4>
+          <p class="text-secondary"><strong>Registration opens</strong><br />1 Dec 2025</p>
+        </div>
+        <div>
+          <h4 class="mt-0">Challenge statements</h4>
+          <p class="text-secondary">2 published: CS1, CS2</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h4>Content</h4>
+          <p class="text-secondary">Terms_and_Conditions_Placeholder.docx &middot; 2 recording(s) &middot; 1 FAQ(s)</p>
+        </div>
+        <div>
+          <h4>Status</h4>
+          <p class="text-secondary">Judging &middot; deadline 14 Feb 2026 (closed)</p>
+        </div>
       </div></div>
+        <div class="tabs__panel" data-panel="description">
+      <h4 class="mt-0">Hero image</h4>
+      <div class="replace-preview" style="height:200px;">
+        <div class="placeholder-image" style="height:200px;">Current hero image</div>
+        <div class="replace-preview__overlay"><span class="icon">&#9998;</span>Replace image</div>
+      </div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Description</h4>
+      <div class="form-field"><textarea rows="4">Four marine operators and one shipyard are jointly sponsoring this challenge to bring predictive maintenance and digital crew management to their fleets. Submissions are now in the judging period.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div></div>
         <div class="tabs__panel" data-panel="participants">
-      <table class="data-table">
+      <table class="data-table data-table--clickable">
         <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
         <tbody>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-maritime-digitalisation-torque-analytics">
           <td>Torque Analytics</td>
           <td>CS1</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -245,7 +546,7 @@
             <div class="progress-label">Submitted, awaiting review (90%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-maritime-digitalisation-crewsync">
           <td>CrewSync</td>
           <td>CS2</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -254,7 +555,7 @@
             <div class="progress-label">Submitted, awaiting review (90%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-maritime-digitalisation-fathom-data-co">
           <td>Fathom Data Co</td>
           <td>CS1</td>
           <td><span class="badge badge-open">Admitted to OIC</span></td>
@@ -263,7 +564,7 @@
             <div class="progress-label">Finalizing submission (60%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-maritime-digitalisation-wavelength-labs">
           <td>Wavelength Labs</td>
           <td>CS2</td>
           <td><span class="badge badge-rejected">Rejected from OIC</span></td>
@@ -274,12 +575,55 @@
         </tr></tbody>
       </table></div>
         <div class="tabs__panel" data-panel="timeline">
-      <ul class="timeline"><li><div class="timeline__date">1 Dec 2025</div>Registration opens</li><li><div class="timeline__date">10 Dec 2025</div>Challenge briefing session</li><li><div class="timeline__date">14 Feb 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">15 Feb - 6 Mar 2026</div>Judging period (in progress)</li><li><div class="timeline__date">13 Mar 2026</div>Results announced</li></ul>
-      <div class="card" style="margin-top:20px; max-width:480px;">
-        <h4 class="mt-0">Add new event</h4>
-        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
-        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      <div data-timeline-tab>
+        <div class="milestone-list">
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-maritime-digitalisation-0">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">1 Dec 2025</span><span class="badge badge-closed">Done</span></div>
+            <strong>Registration opens</strong>
+            <p class="text-secondary">Registration opens to teams across the sponsoring fleets' networks.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-maritime-digitalisation-1">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">10 Dec 2025</span><span class="badge badge-closed">Done</span></div>
+            <strong>Challenge briefing session</strong>
+            <p class="text-secondary">Kickoff briefing covering both challenge statements and available sensor data.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-maritime-digitalisation-2">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">14 Feb 2026, 6:00pm SGT</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Submission deadline</strong>
+            <p class="text-secondary">Working demo, solution write-up, and 3-minute video due.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-maritime-digitalisation-3">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">15 Feb - 6 Mar 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Judging period (in progress)</strong>
+            <p class="text-secondary">Sponsor engineers and EnterpriseSG score every submission.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-maritime-digitalisation-4">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">13 Mar 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Results announced</strong>
+            <p class="text-secondary">Winners announced; pilot kick-off across the sponsoring fleets.</p>
+          </div>
+        </div>
+        </div>
+        <div class="card" data-add-event style="margin-top:20px; max-width:480px;">
+          <h4 class="mt-0">Add new event</h4>
+          <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
+          <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        </div>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Engine Maintenance</strong><p class="text-secondary mt-0">Forecast engine and drivetrain failure risk from onboard sensor data before it causes unscheduled downtime.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Digital Crew Scheduling</strong><p class="text-secondary mt-0">Optimize crew rotation and rest-hour compliance across a mixed fleet of tankers and support vessels.</p></div>
@@ -291,17 +635,29 @@
       </div></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="download-card" style="margin-bottom:8px;">
+      <div class="replace-preview__file" style="max-width:480px;">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
       </div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
 
-      <h4>Recordings</h4>
-      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">10 Dec 2025 &middot; 47 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Vessel sensor data walkthrough</span><span class="text-muted">18 Dec 2025 &middot; 19 min</span></div></div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Recordings</h4>
+      
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Challenge briefing session</strong><span>10 Dec 2025 &middot; 47 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Vessel sensor data walkthrough</strong><span>18 Dec 2025 &middot; 19 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+
+      <hr class="tab-divider" />
 
       <h4>FAQs</h4>
       <div class="card" style="margin-bottom:10px;"><strong>What sensor data is provided?</strong><p class="text-secondary mt-0">Anonymized engine telemetry from 6 vessels across the sponsoring fleets, 18 months of history.</p><a href="#">Edit</a></div>
@@ -314,6 +670,141 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-participant-maritime-digitalisation-torque-analytics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">Torque Analytics</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Maritime Digitalisation Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Torque Analytics Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>4 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>team@torqueanalytics.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Predictive-maintenance team spun out from an offshore rig operator's data science group.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Torque-Analytics-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-maritime-digitalisation-crewsync">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">CrewSync</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Maritime Digitalisation Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>CrewSync Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>3 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>hello@crewsync.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>HR-tech founders building rostering software, applying it to maritime rest-hour compliance.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>CrewSync-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-maritime-digitalisation-fathom-data-co">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Admitted to OIC</span>
+      <h2 class="mt-0">Fathom Data Co</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Maritime Digitalisation Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Fathom Data Co</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>5 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>contact@fathomdata.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Marine engineering graduates building sensor fusion models for engine health.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-maritime-digitalisation-wavelength-labs">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-rejected">Rejected from OIC</span>
+      <h2 class="mt-0">Wavelength Labs</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Maritime Digitalisation Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Wavelength Labs Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>2 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>info@wavelengthlabs.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Generalist scheduling SaaS team without maritime-specific experience.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-maritime-digitalisation-0">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Registration opens" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="1 Dec 2025" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Registration opens to teams across the sponsoring fleets' networks.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-maritime-digitalisation-1">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Challenge briefing session" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="10 Dec 2025" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Kickoff briefing covering both challenge statements and available sensor data.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-maritime-digitalisation-2">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Submission deadline" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="14 Feb 2026, 6:00pm SGT" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Working demo, solution write-up, and 3-minute video due.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-maritime-digitalisation-3">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Judging period (in progress)" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="15 Feb - 6 Mar 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Sponsor engineers and EnterpriseSG score every submission.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-maritime-digitalisation-4">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Results announced" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="13 Mar 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Winners announced; pilot kick-off across the sponsoring fleets.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-green-shipping">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -323,27 +814,63 @@
       <div data-tabs>
         <div class="tabs__list">
           <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="description">Description</button>
           <button class="tabs__tab" data-tab="participants">Participants</button>
           <button class="tabs__tab" data-tab="timeline">Timeline</button>
-          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="statements">Statements</button>
           <button class="tabs__tab" data-tab="content">Content</button>
         </div>
         <div class="tabs__panel is-active" data-panel="overview">
-      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
-      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
-      <h4>Description</h4>
-      <div class="form-field"><textarea rows="4">A three-way sponsorship focused on emissions visibility and cleaner bunkering operations. Shortlisted teams pilot with the sponsors' own vessels and bunkering stations.</textarea></div>
-      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
-      <h4>Demand drivers</h4>
+      <div class="grid grid-3" style="margin-bottom:20px;"><div class="card card-elevated"><div class="stat-bar__value">14</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">62</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
+
+      <h4 class="mt-0">Demand drivers</h4>
       <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Tidewater Offshore Solutions</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
-      <div class="grid grid-3" style="margin:20px 0;">
-        <div class="card card-elevated"><div class="stat-bar__value">14</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">62</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Participants by status</h4>
+      <p><span class="badge badge-closed">1 Proposal Submitted</span> <span class="badge badge-open">1 Admitted to OIC</span> <span class="badge badge-draft">1 Application Pending Review</span> </p>
+
+      <hr class="tab-divider" />
+
+      <div class="grid grid-2">
+        <div>
+          <h4 class="mt-0">Next up on the timeline</h4>
+          <p class="text-secondary"><strong>Registration opens</strong><br />2 Feb 2026</p>
+        </div>
+        <div>
+          <h4 class="mt-0">Challenge statements</h4>
+          <p class="text-secondary">2 published: CS1, CS2</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h4>Content</h4>
+          <p class="text-secondary">Terms_and_Conditions_Placeholder.docx &middot; 1 recording(s) &middot; 1 FAQ(s)</p>
+        </div>
+        <div>
+          <h4>Status</h4>
+          <p class="text-secondary">Live &middot; deadline 20 Apr 2026</p>
+        </div>
       </div></div>
+        <div class="tabs__panel" data-panel="description">
+      <h4 class="mt-0">Hero image</h4>
+      <div class="replace-preview" style="height:200px;">
+        <div class="placeholder-image" style="height:200px;">Current hero image</div>
+        <div class="replace-preview__overlay"><span class="icon">&#9998;</span>Replace image</div>
+      </div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Description</h4>
+      <div class="form-field"><textarea rows="4">A three-way sponsorship focused on emissions visibility and cleaner bunkering operations. Shortlisted teams pilot with the sponsors' own vessels and bunkering stations.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div></div>
         <div class="tabs__panel" data-panel="participants">
-      <table class="data-table">
+      <table class="data-table data-table--clickable">
         <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
         <tbody>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-green-shipping-carbon-compass">
           <td>Carbon Compass</td>
           <td>CS1</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -352,7 +879,7 @@
             <div class="progress-label">Submitted, awaiting review (70%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-green-shipping-bunker-flow-systems">
           <td>Bunker Flow Systems</td>
           <td>CS2</td>
           <td><span class="badge badge-open">Admitted to OIC</span></td>
@@ -361,7 +888,7 @@
             <div class="progress-label">Draft in progress (40%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-green-shipping-greenknot-maritime">
           <td>GreenKnot Maritime</td>
           <td>CS1</td>
           <td><span class="badge badge-draft">Application Pending Review</span></td>
@@ -372,12 +899,55 @@
         </tr></tbody>
       </table></div>
         <div class="tabs__panel" data-panel="timeline">
-      <ul class="timeline"><li><div class="timeline__date">2 Feb 2026</div>Registration opens</li><li><div class="timeline__date">16 Feb 2026</div>Challenge briefing session</li><li><div class="timeline__date">20 Apr 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">22 Apr - 8 May 2026</div>Judging period</li><li><div class="timeline__date">15 May 2026</div>Results announced</li></ul>
-      <div class="card" style="margin-top:20px; max-width:480px;">
-        <h4 class="mt-0">Add new event</h4>
-        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
-        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      <div data-timeline-tab>
+        <div class="milestone-list">
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-green-shipping-0">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">2 Feb 2026</span><span class="badge badge-closed">Done</span></div>
+            <strong>Registration opens</strong>
+            <p class="text-secondary">Registration opens to Singapore-registered teams.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-green-shipping-1">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">16 Feb 2026</span><span class="badge badge-closed">Done</span></div>
+            <strong>Challenge briefing session</strong>
+            <p class="text-secondary">Briefing on emissions data access and bunkering operations.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-green-shipping-2">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">20 Apr 2026, 6:00pm SGT</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Submission deadline</strong>
+            <p class="text-secondary">Working demo, solution write-up, and 3-minute video due.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-green-shipping-3">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">22 Apr - 8 May 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Judging period</strong>
+            <p class="text-secondary">Sponsors and EnterpriseSG score every submission.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-green-shipping-4">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">15 May 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Results announced</strong>
+            <p class="text-secondary">Winners announced; pilot kick-off with the sponsoring fleets.</p>
+          </div>
+        </div>
+        </div>
+        <div class="card" data-add-event style="margin-top:20px; max-width:480px;">
+          <h4 class="mt-0">Add new event</h4>
+          <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
+          <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        </div>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Emissions Tracking Dashboard</strong><p class="text-secondary mt-0">Aggregate fuel consumption and emissions data across a mixed fleet into one live dashboard.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Green Bunkering Route Optimization</strong><p class="text-secondary mt-0">Sequence bunkering calls to minimize idle time and emissions during fuel transfer.</p></div>
@@ -389,17 +959,24 @@
       </div></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="download-card" style="margin-bottom:8px;">
+      <div class="replace-preview__file" style="max-width:480px;">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
       </div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
 
-      <h4>Recordings</h4>
-      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">16 Feb 2026 &middot; 41 min</span></div></div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Recordings</h4>
+      
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Challenge briefing session</strong><span>16 Feb 2026 &middot; 41 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+
+      <hr class="tab-divider" />
 
       <h4>FAQs</h4>
       <div class="card" style="margin-bottom:10px;"><strong>Is this open to teams outside Singapore?</strong><p class="text-secondary mt-0">No, open to Singapore-registered entities and individuals only.</p><a href="#">Edit</a></div>
@@ -412,6 +989,121 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-participant-green-shipping-carbon-compass">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">Carbon Compass</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Port Sustainability &amp; Green Shipping Sprint</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Carbon Compass Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>4 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>team@carboncompass.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Emissions-accounting software team moving from land freight into marine bunkering.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Carbon-Compass-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-green-shipping-bunker-flow-systems">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Admitted to OIC</span>
+      <h2 class="mt-0">Bunker Flow Systems</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Port Sustainability &amp; Green Shipping Sprint</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Bunker Flow Systems Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>3 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>hello@bunkerflow.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Ex-bunkering-operations team building scheduling optimization tools.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-green-shipping-greenknot-maritime">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-draft">Application Pending Review</span>
+      <h2 class="mt-0">GreenKnot Maritime</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Port Sustainability &amp; Green Shipping Sprint</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>GreenKnot Maritime Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>2 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>info@greenknot.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Two-person sustainability consultancy proposing a dashboard MVP.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-green-shipping-0">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Registration opens" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="2 Feb 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Registration opens to Singapore-registered teams.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-green-shipping-1">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Challenge briefing session" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="16 Feb 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Briefing on emissions data access and bunkering operations.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-green-shipping-2">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Submission deadline" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="20 Apr 2026, 6:00pm SGT" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Working demo, solution write-up, and 3-minute video due.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-green-shipping-3">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Judging period" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="22 Apr - 8 May 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Sponsors and EnterpriseSG score every submission.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-green-shipping-4">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Results announced" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="15 May 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Winners announced; pilot kick-off with the sponsoring fleets.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-crew-welfare">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -421,27 +1113,63 @@
       <div data-tabs>
         <div class="tabs__list">
           <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="description">Description</button>
           <button class="tabs__tab" data-tab="participants">Participants</button>
           <button class="tabs__tab" data-tab="timeline">Timeline</button>
-          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="statements">Statements</button>
           <button class="tabs__tab" data-tab="content">Content</button>
         </div>
         <div class="tabs__panel is-active" data-panel="overview">
-      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
-      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
-      <h4>Description</h4>
-      <div class="form-field"><textarea rows="4">Completed challenge on crew safety and welfare technology, co-sponsored by four marine and logistics partners. Winning solutions are now in pilot with the sponsoring fleets.</textarea></div>
-      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
-      <h4>Demand drivers</h4>
+      <div class="grid grid-3" style="margin-bottom:20px;"><div class="card card-elevated"><div class="stat-bar__value">22</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
+
+      <h4 class="mt-0">Demand drivers</h4>
       <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Voyager Freight Lines</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
-      <div class="grid grid-3" style="margin:20px 0;">
-        <div class="card card-elevated"><div class="stat-bar__value">22</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Participants by status</h4>
+      <p><span class="badge badge-open">2 Admitted to OIC</span> <span class="badge badge-closed">1 Proposal Submitted</span> <span class="badge badge-rejected">1 Rejected from OIC</span> </p>
+
+      <hr class="tab-divider" />
+
+      <div class="grid grid-2">
+        <div>
+          <h4 class="mt-0">Next up on the timeline</h4>
+          <p class="text-secondary"><strong>Results announced &amp; pilot kick-off</strong><br />20 Jan 2026</p>
+        </div>
+        <div>
+          <h4 class="mt-0">Challenge statements</h4>
+          <p class="text-secondary">2 published: CS1, CS2</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <h4>Content</h4>
+          <p class="text-secondary">Terms_and_Conditions_Placeholder.docx &middot; 2 recording(s) &middot; 1 FAQ(s)</p>
+        </div>
+        <div>
+          <h4>Status</h4>
+          <p class="text-secondary">Completed &middot; deadline Closed 20 Jan 2026</p>
+        </div>
       </div></div>
+        <div class="tabs__panel" data-panel="description">
+      <h4 class="mt-0">Hero image</h4>
+      <div class="replace-preview" style="height:200px;">
+        <div class="placeholder-image" style="height:200px;">Current hero image</div>
+        <div class="replace-preview__overlay"><span class="icon">&#9998;</span>Replace image</div>
+      </div>
+
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Description</h4>
+      <div class="form-field"><textarea rows="4">Completed challenge on crew safety and welfare technology, co-sponsored by four marine and logistics partners. Winning solutions are now in pilot with the sponsoring fleets.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div></div>
         <div class="tabs__panel" data-panel="participants">
-      <table class="data-table">
+      <table class="data-table data-table--clickable">
         <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
         <tbody>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-crew-welfare-restwell-maritime">
           <td>Restwell Maritime</td>
           <td>CS1</td>
           <td><span class="badge badge-open">Admitted to OIC</span></td>
@@ -450,7 +1178,7 @@
             <div class="progress-label">Winner - piloting (100%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-crew-welfare-anchor-mind-health">
           <td>Anchor Mind Health</td>
           <td>CS2</td>
           <td><span class="badge badge-open">Admitted to OIC</span></td>
@@ -459,7 +1187,7 @@
             <div class="progress-label">Winner - piloting (100%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-crew-welfare-safewatch-wearables">
           <td>SafeWatch Wearables</td>
           <td>CS1</td>
           <td><span class="badge badge-closed">Proposal Submitted</span></td>
@@ -468,7 +1196,7 @@
             <div class="progress-label">Submitted, not selected (100%)</div>
           </td>
         </tr>
-        <tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-participant-crew-welfare-calm-seas-co">
           <td>Calm Seas Co</td>
           <td>CS2</td>
           <td><span class="badge badge-rejected">Rejected from OIC</span></td>
@@ -479,12 +1207,55 @@
         </tr></tbody>
       </table></div>
         <div class="tabs__panel" data-panel="timeline">
-      <ul class="timeline"><li><div class="timeline__date">1 Oct 2025</div>Registration opened</li><li><div class="timeline__date">14 Oct 2025</div>Challenge briefing session</li><li><div class="timeline__date">5 Dec 2025, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">8 Dec 2025 - 10 Jan 2026</div>Judging period</li><li><div class="timeline__date">20 Jan 2026</div>Results announced &amp; pilot kick-off</li></ul>
-      <div class="card" style="margin-top:20px; max-width:480px;">
-        <h4 class="mt-0">Add new event</h4>
-        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
-        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      <div data-timeline-tab>
+        <div class="milestone-list">
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-crew-welfare-0">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">1 Oct 2025</span><span class="badge badge-closed">Done</span></div>
+            <strong>Registration opened</strong>
+            <p class="text-secondary">Registration opened to teams across the sponsoring fleets' networks.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable" data-modal-target="modal-timeline-crew-welfare-1">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">14 Oct 2025</span><span class="badge badge-closed">Done</span></div>
+            <strong>Challenge briefing session</strong>
+            <p class="text-secondary">Kickoff briefing on both challenge statements.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-crew-welfare-2">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">5 Dec 2025, 6:00pm SGT</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Submission deadline</strong>
+            <p class="text-secondary">Working demo, solution write-up, and 3-minute video due.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-crew-welfare-3">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">8 Dec 2025 - 10 Jan 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Judging period</strong>
+            <p class="text-secondary">Sponsor engineers and EnterpriseSG scored every submission.</p>
+          </div>
+        </div>
+        <div class="milestone-card milestone-card--clickable is-upcoming" data-modal-target="modal-timeline-crew-welfare-4">
+          <div class="milestone-marker"></div>
+          <div>
+            <div class="milestone-row"><span class="milestone-date">20 Jan 2026</span><span class="badge badge-open">Upcoming</span></div>
+            <strong>Results announced &amp; pilot kick-off</strong>
+            <p class="text-secondary">Winners announced; both are now piloting across the sponsoring fleets.</p>
+          </div>
+        </div>
+        </div>
+        <div class="card" data-add-event style="margin-top:20px; max-width:480px;">
+          <h4 class="mt-0">Add new event</h4>
+          <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
+          <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
+          <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        </div>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Fatigue Monitoring Wearables</strong><p class="text-secondary mt-0">Wearable-based fatigue detection with alerts for watchkeeping crew.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Onboard Mental Health Support Platform</strong><p class="text-secondary mt-0">Confidential, low-bandwidth support access for crew on long voyages.</p></div>
@@ -496,17 +1267,29 @@
       </div></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="download-card" style="margin-bottom:8px;">
+      <div class="replace-preview__file" style="max-width:480px;">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
       </div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
 
-      <h4>Recordings</h4>
-      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">14 Oct 2025 &middot; 50 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Winners announcement</span><span class="text-muted">20 Jan 2026 &middot; 15 min</span></div></div>
-      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
-      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+      <hr class="tab-divider" />
+
+      <h4 class="mt-0">Recordings</h4>
+      
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Challenge briefing session</strong><span>14 Oct 2025 &middot; 50 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="replace-preview__file" style="margin-bottom:10px;">
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>Winners announcement</strong><span>20 Jan 2026 &middot; 15 min</span></span>
+        <div class="file-overlay">&#9998; Replace</div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+
+      <hr class="tab-divider" />
 
       <h4>FAQs</h4>
       <div class="card" style="margin-bottom:10px;"><strong>Were the winning solutions piloted?</strong><p class="text-secondary mt-0">Yes - both winners are in an 8-week pilot across the sponsoring fleets as of Jan 2026.</p><a href="#">Edit</a></div>
@@ -516,6 +1299,141 @@
         <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
       </div></div>
       </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-crew-welfare-restwell-maritime">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Admitted to OIC</span>
+      <h2 class="mt-0">Restwell Maritime</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Crew Welfare &amp; Safety Tech Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Restwell Maritime Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>4 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>team@restwellmaritime.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Wearables team from a sleep-tech background, adapting fatigue algorithms for watchkeeping schedules.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Restwell-Maritime-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-crew-welfare-anchor-mind-health">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Admitted to OIC</span>
+      <h2 class="mt-0">Anchor Mind Health</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Crew Welfare &amp; Safety Tech Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Anchor Mind Health Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>3 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>hello@anchormindhealth.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Telehealth team building a low-bandwidth support platform for seafarers.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>Anchor-Mind-Health-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-crew-welfare-safewatch-wearables">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Proposal Submitted</span>
+      <h2 class="mt-0">SafeWatch Wearables</h2>
+      <p class="text-secondary">Applying for CS1 &middot; Crew Welfare &amp; Safety Tech Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>SafeWatch Wearables Pte Ltd</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>5 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>contact@safewatch.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Hardware-first team with a fatigue-monitoring wristband prototype.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <div class="replace-preview__file" style="cursor:default;"><span class="download-card__icon">PDF</span><span class="download-card__meta"><strong>SafeWatch-Wearables-proposal.pdf</strong><span>Submitted proposal</span></span></div><div class="form-actions"><a href="#" class="btn btn-secondary">Download Proposal</a></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-participant-crew-welfare-calm-seas-co">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-rejected">Rejected from OIC</span>
+      <h2 class="mt-0">Calm Seas Co</h2>
+      <p class="text-secondary">Applying for CS2 &middot; Crew Welfare &amp; Safety Tech Challenge</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Application</h4>
+      <dl>
+        <div class="detail-field"><dt>Organization</dt><dd>Calm Seas Co</dd></div>
+        <div class="detail-field"><dt>Team size</dt><dd>2 members</dd></div>
+        <div class="detail-field"><dt>Contact email</dt><dd>info@calmseasco.sg</dd></div>
+        <div class="detail-field"><dt>Why this challenge?</dt><dd>Early-stage wellness app team without a maritime-specific pilot plan.</dd></div>
+      </dl>
+      <hr class="tab-divider" />
+      <h4>Proposal</h4>
+      <p class="text-muted">No proposal submitted yet.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-crew-welfare-0">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Registration opened" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="1 Oct 2025" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Registration opened to teams across the sponsoring fleets' networks.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-crew-welfare-1">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Challenge briefing session" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="14 Oct 2025" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Kickoff briefing on both challenge statements.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-crew-welfare-2">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Submission deadline" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="5 Dec 2025, 6:00pm SGT" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Working demo, solution write-up, and 3-minute video due.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-crew-welfare-3">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Judging period" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="8 Dec 2025 - 10 Jan 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Sponsor engineers and EnterpriseSG scored every submission.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-timeline-crew-welfare-4">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Edit event</h2>
+      <div class="form-field"><label>Event name</label><input type="text" value="Results announced &amp; pilot kick-off" /></div>
+      <div class="form-field"><label>Date</label><input type="text" value="20 Jan 2026" /></div>
+      <div class="form-field"><label>Description</label><textarea rows="3">Winners announced; both are now piloting across the sponsoring fleets.</textarea></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Save Changes</button></div>
     </div>
   </div>
 

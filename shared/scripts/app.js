@@ -145,6 +145,36 @@ function initStatusFilter() {
   });
 }
 
+function initAddEventForms() {
+  document.querySelectorAll("[data-add-event]").forEach((form) => {
+    const list = form.closest("[data-timeline-tab]")?.querySelector(".milestone-list");
+    const nameInput = form.querySelector('[data-field="name"]');
+    const dateInput = form.querySelector('[data-field="date"]');
+    const button = form.querySelector('[data-action="add-event"]');
+    if (!list || !nameInput || !dateInput || !button) return;
+    button.addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      const date = dateInput.value;
+      if (!name || !date) return;
+      const displayDate = new Date(date).toLocaleString("en-SG", {
+        day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit",
+      });
+      const card = document.createElement("div");
+      card.className = "milestone-card is-upcoming";
+      card.innerHTML = `
+        <div class="milestone-marker"></div>
+        <div>
+          <div class="milestone-row"><span class="milestone-date">${displayDate}</span><span class="badge badge-open">Upcoming</span></div>
+          <strong>${name}</strong>
+          <p class="text-secondary">No description yet - click to edit.</p>
+        </div>`;
+      list.appendChild(card);
+      nameInput.value = "";
+      dateInput.value = "";
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initAccordions();
   initTabs();
@@ -156,4 +186,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initViewToggle();
   initStatusFilter();
+  initAddEventForms();
 });
