@@ -112,6 +112,39 @@ function initModals() {
   });
 }
 
+function initViewToggle() {
+  document.querySelectorAll(".view-toggle").forEach((toggle) => {
+    const buttons = toggle.querySelectorAll(".view-toggle__btn");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        const target = btn.dataset.view;
+        document.querySelectorAll("[data-view-panel]").forEach((panel) => {
+          panel.style.display = panel.dataset.viewPanel === target ? "" : "none";
+        });
+      });
+    });
+  });
+}
+
+function initStatusFilter() {
+  document.querySelectorAll(".status-filter").forEach((filterGroup) => {
+    const pills = filterGroup.querySelectorAll(".filter-pill");
+    pills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        pills.forEach((p) => p.classList.remove("is-active"));
+        pill.classList.add("is-active");
+        const status = pill.dataset.status;
+        document.querySelectorAll("[data-oic-status]").forEach((item) => {
+          const show = status === "all" || item.dataset.oicStatus === status;
+          item.style.display = show ? "" : "none";
+        });
+      });
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initAccordions();
   initTabs();
@@ -121,4 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initDrawers();
   initCarousels();
   initModals();
+  initViewToggle();
+  initStatusFilter();
 });

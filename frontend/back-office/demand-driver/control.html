@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Hackathons | EnterpriseSG Challenge Console</title>
+  <title>My Open Innovation Challenges | EnterpriseSG Challenge Console</title>
   <link rel="stylesheet" href="../../../shared/styles/tokens.css" />
   <link rel="stylesheet" href="../../../shared/styles/base.css" />
   <link rel="stylesheet" href="../../../shared/styles/layout.css" />
@@ -24,16 +24,69 @@
     <section class="content-section">
       <div class="container-wide">
         <div class="flex-between">
-          <h2 class="mt-0">My Hackathons</h2>
-          <button type="button" class="btn btn-primary">+ New Hackathon</button>
+          <h2 class="mt-0">My Open Innovation Challenges</h2>
+          <button type="button" class="btn btn-primary">+ New Open Innovation Challenge</button>
         </div>
-        <p class="text-muted">Showing hackathons run by Meridian Logistics Pte Ltd only. Click a row for full detail, proposals, and participants.</p>
-        <table class="data-table data-table--clickable">
-          <thead><tr><th>Hackathon</th><th>Demand driver</th><th>Status</th><th>Deadline</th><th>Proposals</th></tr></thead>
-          <tbody>
-            <tr class="data-table--clickable-row" data-modal-target="modal-smart-logistics"><td>Smart Logistics &amp; Supply Chain Resilience</td><td>Meridian Logistics Pte Ltd</td><td><span class="badge badge-open">Live</span></td><td>6 Mar 2026</td><td>27</td></tr>
-          </tbody>
-        </table>
+        <p class="text-muted">Showing Open Innovation Challenges where Meridian Logistics Pte Ltd is a demand driver. Click a row or card for full detail, participants, and content.</p>
+
+        <div class="view-toolbar">
+          <div class="status-filter">
+            <button class="filter-pill is-active" data-status="all">All</button>
+            <button class="filter-pill" data-status="live">Live</button>
+            <button class="filter-pill" data-status="judging">Judging</button>
+            <button class="filter-pill" data-status="completed">Completed</button>
+          </div>
+          <div class="view-toggle">
+            <button class="view-toggle__btn is-active" data-view="table">Table</button>
+            <button class="view-toggle__btn" data-view="cards">Cards</button>
+          </div>
+        </div>
+
+        <div data-view-panel="table">
+          <table class="data-table data-table--clickable">
+            <thead><tr><th>Open Innovation Challenge</th><th>Demand drivers</th><th>Status</th><th>Deadline</th><th>Proposals</th></tr></thead>
+            <tbody><tr class="data-table--clickable-row" data-modal-target="modal-smart-logistics" data-oic-status="live"><td>Smart Logistics &amp; Supply Chain Resilience</td><td>Meridian Logistics Pte Ltd <span class="text-muted">+3 more</span></td><td><span class="badge badge-open">Live</span></td><td>6 Mar 2026</td><td>27</td></tr><tr class="data-table--clickable-row" data-modal-target="modal-maritime-digitalisation" data-oic-status="judging"><td>Maritime Digitalisation Challenge</td><td>Meridian Logistics Pte Ltd <span class="text-muted">+3 more</span></td><td><span class="badge badge-evaluating">Judging</span></td><td>14 Feb 2026 (closed)</td><td>19</td></tr><tr class="data-table--clickable-row" data-modal-target="modal-green-shipping" data-oic-status="live"><td>Port Sustainability &amp; Green Shipping Sprint</td><td>Meridian Logistics Pte Ltd <span class="text-muted">+2 more</span></td><td><span class="badge badge-open">Live</span></td><td>20 Apr 2026</td><td>14</td></tr><tr class="data-table--clickable-row" data-modal-target="modal-crew-welfare" data-oic-status="completed"><td>Crew Welfare &amp; Safety Tech Challenge</td><td>Meridian Logistics Pte Ltd <span class="text-muted">+3 more</span></td><td><span class="badge badge-closed">Completed</span></td><td>Closed 20 Jan 2026</td><td>22</td></tr></tbody>
+          </table>
+        </div>
+        <div data-view-panel="cards" style="display:none;">
+          <div class="oic-card-grid">
+        <div class="oic-card" data-modal-target="modal-smart-logistics" data-oic-status="live">
+          <div class="placeholder-image">OIC hero image placeholder</div>
+          <div class="oic-card__body">
+            <span class="badge badge-open">Live</span>
+            <h3>Smart Logistics &amp; Supply Chain Resilience</h3>
+            <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Blue Horizon Shipping Line</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
+            <div class="oic-card__meta"><span>27 proposals</span><span>6 Mar 2026</span></div>
+          </div>
+        </div>
+        <div class="oic-card" data-modal-target="modal-maritime-digitalisation" data-oic-status="judging">
+          <div class="placeholder-image">OIC hero image placeholder</div>
+          <div class="oic-card__body">
+            <span class="badge badge-evaluating">Judging</span>
+            <h3>Maritime Digitalisation Challenge</h3>
+            <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Kestrel Tanker Group</span><span class="dd-tag">Anchorpoint Marine Services</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
+            <div class="oic-card__meta"><span>19 proposals</span><span>14 Feb 2026 (closed)</span></div>
+          </div>
+        </div>
+        <div class="oic-card" data-modal-target="modal-green-shipping" data-oic-status="live">
+          <div class="placeholder-image">OIC hero image placeholder</div>
+          <div class="oic-card__body">
+            <span class="badge badge-open">Live</span>
+            <h3>Port Sustainability &amp; Green Shipping Sprint</h3>
+            <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Tidewater Offshore Solutions</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
+            <div class="oic-card__meta"><span>14 proposals</span><span>20 Apr 2026</span></div>
+          </div>
+        </div>
+        <div class="oic-card" data-modal-target="modal-crew-welfare" data-oic-status="completed">
+          <div class="placeholder-image">OIC hero image placeholder</div>
+          <div class="oic-card__body">
+            <span class="badge badge-closed">Completed</span>
+            <h3>Crew Welfare &amp; Safety Tech Challenge</h3>
+            <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Voyager Freight Lines</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
+            <div class="oic-card__meta"><span>22 proposals</span><span>Closed 20 Jan 2026</span></div>
+          </div>
+        </div></div>
+        </div>
       </div>
     </section>
   </main>
@@ -43,15 +96,426 @@
       <button class="modal__close" aria-label="Close">&times;</button>
       <span class="badge badge-open">Live</span>
       <h2 class="mt-0">Smart Logistics &amp; Supply Chain Resilience</h2>
-      <p class="text-secondary"><strong>Meridian Logistics Pte Ltd</strong> &middot; deadline 6 Mar 2026</p>
-      <div class="grid grid-3" style="margin:20px 0;"><div class="card card-elevated"><div class="stat-bar__value">27</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">12</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div></div>
-      <p class="text-secondary"><strong>Participants:</strong> 27 participants across 9 teams</p>
-      <h3>Submitted proposals</h3>
+      <p class="text-secondary">deadline 6 Mar 2026</p>
+      <div data-tabs>
+        <div class="tabs__list">
+          <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="participants">Participants</button>
+          <button class="tabs__tab" data-tab="timeline">Timeline</button>
+          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="content">Content</button>
+        </div>
+        <div class="tabs__panel is-active" data-panel="overview">
+      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
+      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
+      <h4>Description</h4>
+      <div class="form-field"><textarea rows="4">Meridian Logistics operates container yards and last-mile distribution hubs across Singapore. This Open Innovation Challenge, co-sponsored with three other marine and logistics partners, invites solution providers to prototype fixes for yard congestion, last-mile routing, and supply-chain risk visibility.</textarea></div>
+      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
+      <h4>Demand drivers</h4>
+      <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Blue Horizon Shipping Line</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
+      <div class="grid grid-3" style="margin:20px 0;">
+        <div class="card card-elevated"><div class="stat-bar__value">27</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">12</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="participants">
       <table class="data-table">
-        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Submitted</th></tr></thead>
-        <tbody><tr><td>Portside Analytics</td><td>CS1 &middot; Yard Congestion</td><td><span class="badge badge-closed">Submitted</span></td><td>4 Mar 2026</td></tr><tr><td>RouteWise</td><td>CS2 &middot; Last-Mile Routing</td><td><span class="badge badge-draft">Draft</span></td><td>-</td></tr><tr><td>Beacon Risk Labs</td><td>CS3 &middot; Risk Alerting</td><td><span class="badge badge-closed">Submitted</span></td><td>3 Mar 2026</td></tr></tbody>
-      </table>
-      <div class="form-actions"><button type="button" class="btn btn-secondary">Download Weekly Report</button></div>
+        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Portside Analytics</td>
+          <td>CS1</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:75%"></div></div>
+            <div class="progress-label">Submitted, awaiting review (75%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>RouteWise</td>
+          <td>CS2</td>
+          <td><span class="badge badge-open">Admitted to OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:25%"></div></div>
+            <div class="progress-label">Draft in progress (25%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Beacon Risk Labs</td>
+          <td>CS3</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:75%"></div></div>
+            <div class="progress-label">Submitted, awaiting review (75%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Harborlight Systems</td>
+          <td>CS1</td>
+          <td><span class="badge badge-draft">Application Pending Review</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+            <div class="progress-label">Application under review (0%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Tidal Wave Analytics</td>
+          <td>CS2</td>
+          <td><span class="badge badge-rejected">Rejected from OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+            <div class="progress-label">Not proceeding (0%)</div>
+          </td>
+        </tr></tbody>
+      </table></div>
+        <div class="tabs__panel" data-panel="timeline">
+      <ul class="timeline"><li><div class="timeline__date">12 Jan 2026</div>Registration opens</li><li><div class="timeline__date">22 Jan 2026</div>Challenge briefing session</li><li><div class="timeline__date">6 Feb 2026</div>Mid-challenge clinic</li><li><div class="timeline__date">6 Mar 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">9-20 Mar 2026</div>Judging period</li><li><div class="timeline__date">27 Mar 2026</div>Results announced</li></ul>
+      <div class="card" style="margin-top:20px; max-width:480px;">
+        <h4 class="mt-0">Add new event</h4>
+        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="statements">
+      <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Container Yard Congestion</strong><p class="text-secondary mt-0">Forecast yard congestion 4-12 hours ahead using gate-in/out and berth schedule data.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Last-Mile Route Optimization</strong><p class="text-secondary mt-0">Re-plan last-mile delivery routes in real time against live traffic and delivery-window changes.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS3 &middot; Supply Chain Risk Alerting</strong><p class="text-secondary mt-0">Surface upstream supplier and shipping-lane risk as an early-warning feed for ops planners.</p></div>
+      <div class="card" style="margin-top:8px; max-width:520px;">
+        <h4 class="mt-0">Add new challenge statement</h4>
+        <div class="form-field"><label>Title</label><input type="text" placeholder="e.g. Cold Chain Visibility" /></div>
+        <div class="form-field"><label>Description</label><textarea rows="3" placeholder="Describe the problem statement..."></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Challenge Statement</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="content">
+      <h4 class="mt-0">Terms &amp; Conditions</h4>
+      <div class="download-card" style="margin-bottom:8px;">
+        <span class="download-card__icon">DOCX</span>
+        <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+      </div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
+
+      <h4>Recordings</h4>
+      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">22 Jan 2026 &middot; 54 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Mid-challenge clinic</span><span class="text-muted">6 Feb 2026 &middot; 38 min</span></div></div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+
+      <h4>FAQs</h4>
+      <div class="card" style="margin-bottom:10px;"><strong>Who can participate?</strong><p class="text-secondary mt-0">Any Singapore-registered company or individual forming a team of up to 5 people.</p><a href="#">Edit</a></div><div class="card" style="margin-bottom:10px;"><strong>Can I submit for more than one challenge statement?</strong><p class="text-secondary mt-0">Yes, as separate submissions per statement.</p><a href="#">Edit</a></div>
+      <div class="card" style="max-width:520px;">
+        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
+      </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-maritime-digitalisation">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-evaluating">Judging</span>
+      <h2 class="mt-0">Maritime Digitalisation Challenge</h2>
+      <p class="text-secondary">deadline 14 Feb 2026 (closed)</p>
+      <div data-tabs>
+        <div class="tabs__list">
+          <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="participants">Participants</button>
+          <button class="tabs__tab" data-tab="timeline">Timeline</button>
+          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="content">Content</button>
+        </div>
+        <div class="tabs__panel is-active" data-panel="overview">
+      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
+      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
+      <h4>Description</h4>
+      <div class="form-field"><textarea rows="4">Four marine operators and one shipyard are jointly sponsoring this challenge to bring predictive maintenance and digital crew management to their fleets. Submissions are now in the judging period.</textarea></div>
+      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
+      <h4>Demand drivers</h4>
+      <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Kestrel Tanker Group</span><span class="dd-tag">Anchorpoint Marine Services</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
+      <div class="grid grid-3" style="margin:20px 0;">
+        <div class="card card-elevated"><div class="stat-bar__value">19</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="participants">
+      <table class="data-table">
+        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Torque Analytics</td>
+          <td>CS1</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:90%"></div></div>
+            <div class="progress-label">Submitted, awaiting review (90%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>CrewSync</td>
+          <td>CS2</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:90%"></div></div>
+            <div class="progress-label">Submitted, awaiting review (90%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Fathom Data Co</td>
+          <td>CS1</td>
+          <td><span class="badge badge-open">Admitted to OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:60%"></div></div>
+            <div class="progress-label">Finalizing submission (60%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Wavelength Labs</td>
+          <td>CS2</td>
+          <td><span class="badge badge-rejected">Rejected from OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+            <div class="progress-label">Not proceeding (0%)</div>
+          </td>
+        </tr></tbody>
+      </table></div>
+        <div class="tabs__panel" data-panel="timeline">
+      <ul class="timeline"><li><div class="timeline__date">1 Dec 2025</div>Registration opens</li><li><div class="timeline__date">10 Dec 2025</div>Challenge briefing session</li><li><div class="timeline__date">14 Feb 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">15 Feb - 6 Mar 2026</div>Judging period (in progress)</li><li><div class="timeline__date">13 Mar 2026</div>Results announced</li></ul>
+      <div class="card" style="margin-top:20px; max-width:480px;">
+        <h4 class="mt-0">Add new event</h4>
+        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="statements">
+      <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Engine Maintenance</strong><p class="text-secondary mt-0">Forecast engine and drivetrain failure risk from onboard sensor data before it causes unscheduled downtime.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Digital Crew Scheduling</strong><p class="text-secondary mt-0">Optimize crew rotation and rest-hour compliance across a mixed fleet of tankers and support vessels.</p></div>
+      <div class="card" style="margin-top:8px; max-width:520px;">
+        <h4 class="mt-0">Add new challenge statement</h4>
+        <div class="form-field"><label>Title</label><input type="text" placeholder="e.g. Cold Chain Visibility" /></div>
+        <div class="form-field"><label>Description</label><textarea rows="3" placeholder="Describe the problem statement..."></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Challenge Statement</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="content">
+      <h4 class="mt-0">Terms &amp; Conditions</h4>
+      <div class="download-card" style="margin-bottom:8px;">
+        <span class="download-card__icon">DOCX</span>
+        <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+      </div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
+
+      <h4>Recordings</h4>
+      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">10 Dec 2025 &middot; 47 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Vessel sensor data walkthrough</span><span class="text-muted">18 Dec 2025 &middot; 19 min</span></div></div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+
+      <h4>FAQs</h4>
+      <div class="card" style="margin-bottom:10px;"><strong>What sensor data is provided?</strong><p class="text-secondary mt-0">Anonymized engine telemetry from 6 vessels across the sponsoring fleets, 18 months of history.</p><a href="#">Edit</a></div>
+      <div class="card" style="max-width:520px;">
+        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
+      </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-green-shipping">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-open">Live</span>
+      <h2 class="mt-0">Port Sustainability &amp; Green Shipping Sprint</h2>
+      <p class="text-secondary">deadline 20 Apr 2026</p>
+      <div data-tabs>
+        <div class="tabs__list">
+          <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="participants">Participants</button>
+          <button class="tabs__tab" data-tab="timeline">Timeline</button>
+          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="content">Content</button>
+        </div>
+        <div class="tabs__panel is-active" data-panel="overview">
+      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
+      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
+      <h4>Description</h4>
+      <div class="form-field"><textarea rows="4">A three-way sponsorship focused on emissions visibility and cleaner bunkering operations. Shortlisted teams pilot with the sponsors' own vessels and bunkering stations.</textarea></div>
+      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
+      <h4>Demand drivers</h4>
+      <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Tidewater Offshore Solutions</span><span class="dd-tag">Compass Bunkering Pte Ltd</span></div>
+      <div class="grid grid-3" style="margin:20px 0;">
+        <div class="card card-elevated"><div class="stat-bar__value">14</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">62</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="participants">
+      <table class="data-table">
+        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Carbon Compass</td>
+          <td>CS1</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:70%"></div></div>
+            <div class="progress-label">Submitted, awaiting review (70%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bunker Flow Systems</td>
+          <td>CS2</td>
+          <td><span class="badge badge-open">Admitted to OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:40%"></div></div>
+            <div class="progress-label">Draft in progress (40%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>GreenKnot Maritime</td>
+          <td>CS1</td>
+          <td><span class="badge badge-draft">Application Pending Review</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+            <div class="progress-label">Application under review (0%)</div>
+          </td>
+        </tr></tbody>
+      </table></div>
+        <div class="tabs__panel" data-panel="timeline">
+      <ul class="timeline"><li><div class="timeline__date">2 Feb 2026</div>Registration opens</li><li><div class="timeline__date">16 Feb 2026</div>Challenge briefing session</li><li><div class="timeline__date">20 Apr 2026, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">22 Apr - 8 May 2026</div>Judging period</li><li><div class="timeline__date">15 May 2026</div>Results announced</li></ul>
+      <div class="card" style="margin-top:20px; max-width:480px;">
+        <h4 class="mt-0">Add new event</h4>
+        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="statements">
+      <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Emissions Tracking Dashboard</strong><p class="text-secondary mt-0">Aggregate fuel consumption and emissions data across a mixed fleet into one live dashboard.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Green Bunkering Route Optimization</strong><p class="text-secondary mt-0">Sequence bunkering calls to minimize idle time and emissions during fuel transfer.</p></div>
+      <div class="card" style="margin-top:8px; max-width:520px;">
+        <h4 class="mt-0">Add new challenge statement</h4>
+        <div class="form-field"><label>Title</label><input type="text" placeholder="e.g. Cold Chain Visibility" /></div>
+        <div class="form-field"><label>Description</label><textarea rows="3" placeholder="Describe the problem statement..."></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Challenge Statement</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="content">
+      <h4 class="mt-0">Terms &amp; Conditions</h4>
+      <div class="download-card" style="margin-bottom:8px;">
+        <span class="download-card__icon">DOCX</span>
+        <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+      </div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
+
+      <h4>Recordings</h4>
+      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">16 Feb 2026 &middot; 41 min</span></div></div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+
+      <h4>FAQs</h4>
+      <div class="card" style="margin-bottom:10px;"><strong>Is this open to teams outside Singapore?</strong><p class="text-secondary mt-0">No, open to Singapore-registered entities and individuals only.</p><a href="#">Edit</a></div>
+      <div class="card" style="max-width:520px;">
+        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
+      </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-crew-welfare">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <span class="badge badge-closed">Completed</span>
+      <h2 class="mt-0">Crew Welfare &amp; Safety Tech Challenge</h2>
+      <p class="text-secondary">deadline Closed 20 Jan 2026</p>
+      <div data-tabs>
+        <div class="tabs__list">
+          <button class="tabs__tab is-active" data-tab="overview">Overview</button>
+          <button class="tabs__tab" data-tab="participants">Participants</button>
+          <button class="tabs__tab" data-tab="timeline">Timeline</button>
+          <button class="tabs__tab" data-tab="statements">Challenge Statements</button>
+          <button class="tabs__tab" data-tab="content">Content</button>
+        </div>
+        <div class="tabs__panel is-active" data-panel="overview">
+      <div class="placeholder-image placeholder-image--hero" style="height:220px; margin-top:0;">OIC hero image placeholder</div>
+      <div class="form-field" style="max-width:420px; margin-top:12px;"><label>Replace hero image</label><input type="file" /></div>
+      <h4>Description</h4>
+      <div class="form-field"><textarea rows="4">Completed challenge on crew safety and welfare technology, co-sponsored by four marine and logistics partners. Winning solutions are now in pilot with the sponsoring fleets.</textarea></div>
+      <div class="form-actions" style="margin-bottom:20px;"><button type="button" class="btn btn-primary">Save Changes</button></div>
+      <h4>Demand drivers</h4>
+      <div class="dd-tags"><span class="dd-tag">Meridian Logistics Pte Ltd</span><span class="dd-tag">Voyager Freight Lines</span><span class="dd-tag">Straits Maritime Holdings</span><span class="dd-tag">Nautica Shipyard &amp; Repair</span></div>
+      <div class="grid grid-3" style="margin:20px 0;">
+        <div class="card card-elevated"><div class="stat-bar__value">22</div><div class="text-secondary">Proposals received</div></div><div class="card card-elevated"><div class="stat-bar__value">0</div><div class="text-secondary">Days to deadline</div></div><div class="card card-elevated"><div class="stat-bar__value">CS1</div><div class="text-secondary">Most-selected statement</div></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="participants">
+      <table class="data-table">
+        <thead><tr><th>Team</th><th>Challenge statement</th><th>Status</th><th>Proposal progress</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Restwell Maritime</td>
+          <td>CS1</td>
+          <td><span class="badge badge-open">Admitted to OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:100%"></div></div>
+            <div class="progress-label">Winner - piloting (100%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Anchor Mind Health</td>
+          <td>CS2</td>
+          <td><span class="badge badge-open">Admitted to OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:100%"></div></div>
+            <div class="progress-label">Winner - piloting (100%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>SafeWatch Wearables</td>
+          <td>CS1</td>
+          <td><span class="badge badge-closed">Proposal Submitted</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:100%"></div></div>
+            <div class="progress-label">Submitted, not selected (100%)</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Calm Seas Co</td>
+          <td>CS2</td>
+          <td><span class="badge badge-rejected">Rejected from OIC</span></td>
+          <td>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+            <div class="progress-label">Not proceeding (0%)</div>
+          </td>
+        </tr></tbody>
+      </table></div>
+        <div class="tabs__panel" data-panel="timeline">
+      <ul class="timeline"><li><div class="timeline__date">1 Oct 2025</div>Registration opened</li><li><div class="timeline__date">14 Oct 2025</div>Challenge briefing session</li><li><div class="timeline__date">5 Dec 2025, 6:00pm SGT</div>Submission deadline</li><li><div class="timeline__date">8 Dec 2025 - 10 Jan 2026</div>Judging period</li><li><div class="timeline__date">20 Jan 2026</div>Results announced &amp; pilot kick-off</li></ul>
+      <div class="card" style="margin-top:20px; max-width:480px;">
+        <h4 class="mt-0">Add new event</h4>
+        <div class="form-field"><label>Event name</label><input type="text" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Event</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="statements">
+      <div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Fatigue Monitoring Wearables</strong><p class="text-secondary mt-0">Wearable-based fatigue detection with alerts for watchkeeping crew.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Onboard Mental Health Support Platform</strong><p class="text-secondary mt-0">Confidential, low-bandwidth support access for crew on long voyages.</p></div>
+      <div class="card" style="margin-top:8px; max-width:520px;">
+        <h4 class="mt-0">Add new challenge statement</h4>
+        <div class="form-field"><label>Title</label><input type="text" placeholder="e.g. Cold Chain Visibility" /></div>
+        <div class="form-field"><label>Description</label><textarea rows="3" placeholder="Describe the problem statement..."></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add Challenge Statement</button></div>
+      </div></div>
+        <div class="tabs__panel" data-panel="content">
+      <h4 class="mt-0">Terms &amp; Conditions</h4>
+      <div class="download-card" style="margin-bottom:8px;">
+        <span class="download-card__icon">DOCX</span>
+        <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
+      </div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new version</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Version</button></div>
+
+      <h4>Recordings</h4>
+      <div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Challenge briefing session</span><span class="text-muted">14 Oct 2025 &middot; 50 min</span></div></div><div class="card" style="margin-bottom:10px;"><div class="flex-between"><span>Winners announcement</span><span class="text-muted">20 Jan 2026 &middot; 15 min</span></div></div>
+      <div class="form-field" style="max-width:420px;"><label>Upload new recording</label><input type="file" /></div>
+      <div class="form-actions" style="margin-bottom:24px;"><button type="button" class="btn btn-secondary">Upload New Recording</button></div>
+
+      <h4>FAQs</h4>
+      <div class="card" style="margin-bottom:10px;"><strong>Were the winning solutions piloted?</strong><p class="text-secondary mt-0">Yes - both winners are in an 8-week pilot across the sponsoring fleets as of Jan 2026.</p><a href="#">Edit</a></div>
+      <div class="card" style="max-width:520px;">
+        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
+      </div></div>
+      </div>
     </div>
   </div>
 
