@@ -15,7 +15,7 @@
     <div class="container-wide">
       <a href="my-hackathons.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
       <div class="site-header__right">
-        <nav class="site-nav"><a href="my-hackathons.html">My Hackathons</a><a href="proposals.html">Proposals</a><a href="evaluation.html">Evaluation</a><span class="site-nav__admin"><a href="hackathon-management.html">Hackathon Mgmt</a><a href="demand-driver-management.html" aria-current="page">Demand Drivers</a><a href="user-access-management.html">Access</a><a href="content-management.html">Content</a><a href="events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="notifications.html">Notifications</a><a href="account.html">Account</a><a href="../login.html" class="btn btn-secondary">Log Out</a></div>
+        <nav class="site-nav"><span class="site-nav__admin"><a href="hackathon-management.html">Hackathon Mgmt</a><a href="user-access-management.html">Access</a><a href="content-management.html">Content</a><a href="events-management.html">Events</a></span></nav><div class="site-header__actions"><a href="demand-driver-management.html" aria-current="page">Demand Drivers</a><a href="notifications.html">Notifications</a><a href="account.html">Account</a><a href="../login.html" class="btn btn-secondary">Log Out</a></div>
       </div>
     </div>
   </header>
@@ -23,25 +23,232 @@
   <main>
     <section class="content-section">
       <div class="container-wide">
-        <h2>Demand Driver Management</h2>
-        <table class="data-table">
-          <thead><tr><th>Organization</th><th>Contact</th><th>Assigned challenge statement(s)</th><th></th></tr></thead>
+        <div class="flex-between">
+          <h2 class="mt-0">Demand Driver Management</h2>
+          <button type="button" class="btn btn-primary" data-modal-target="modal-provision-dd">Provision New Demand Driver</button>
+        </div>
+        <p class="text-muted">Click a row for contact details and every Open Innovation Challenge this demand driver sponsors.</p>
+        <table class="data-table data-table--clickable">
+          <thead><tr><th>Organization</th><th>Contact</th><th>Open Innovation Challenges</th></tr></thead>
           <tbody>
-            <tr><td>Meridian Logistics Pte Ltd</td><td>ops-lead@meridianlogistics.sg</td><td>CS1, CS2, CS3</td><td><a href="#">Assign statement</a></td></tr>
-            <tr><td>Arcflow Manufacturing Pte Ltd</td><td>digital@arcflowmfg.sg</td><td>CS1 (GreenFactory)</td><td><a href="#">Assign statement</a></td></tr>
-            <tr><td>Northgate Retail Group</td><td>innovation@northgateretail.sg</td><td>CS1, CS2 (Retail Sprint)</td><td><a href="#">Assign statement</a></td></tr>
-          </tbody>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-meridian-logistics-pte-ltd">
+          <td>Meridian Logistics Pte Ltd</td>
+          <td>ops-lead@meridianlogistics.sg</td>
+          <td>Smart Logistics &amp; Supply Chain Resilience, Maritime Digitalisation Challenge, Port Sustainability &amp; Green Shipping Sprint, Crew Welfare &amp; Safety Tech Challenge</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-straits-maritime-holdings">
+          <td>Straits Maritime Holdings</td>
+          <td>partnerships@straitsmaritime.sg</td>
+          <td>Smart Logistics &amp; Supply Chain Resilience, Crew Welfare &amp; Safety Tech Challenge</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-blue-horizon-shipping-line">
+          <td>Blue Horizon Shipping Line</td>
+          <td>partnerships@bluehorizonshipping.sg</td>
+          <td>Smart Logistics &amp; Supply Chain Resilience</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-compass-bunkering-pte-ltd">
+          <td>Compass Bunkering Pte Ltd</td>
+          <td>ops@compassbunkering.sg</td>
+          <td>Smart Logistics &amp; Supply Chain Resilience, Port Sustainability &amp; Green Shipping Sprint</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-kestrel-tanker-group">
+          <td>Kestrel Tanker Group</td>
+          <td>partnerships@kestreltankers.sg</td>
+          <td>Maritime Digitalisation Challenge</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-anchorpoint-marine-services">
+          <td>Anchorpoint Marine Services</td>
+          <td>contact@anchorpointmarine.sg</td>
+          <td>Maritime Digitalisation Challenge</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-nautica-shipyard-amp-repair">
+          <td>Nautica Shipyard &amp; Repair</td>
+          <td>partnerships@nauticashipyard.sg</td>
+          <td>Maritime Digitalisation Challenge, Crew Welfare &amp; Safety Tech Challenge</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-tidewater-offshore-solutions">
+          <td>Tidewater Offshore Solutions</td>
+          <td>contact@tidewateroffshore.sg</td>
+          <td>Port Sustainability &amp; Green Shipping Sprint</td>
+        </tr>
+        <tr class="data-table--clickable-row" data-modal-target="modal-dd-voyager-freight-lines">
+          <td>Voyager Freight Lines</td>
+          <td>partnerships@voyagerfreight.sg</td>
+          <td>Crew Welfare &amp; Safety Tech Challenge</td>
+        </tr></tbody>
         </table>
-
-        <h3 style="margin-top:32px;">Onboard a demand driver</h3>
-        <form style="max-width:480px;">
-          <div class="form-field"><label>Organization name</label><input type="text" placeholder="e.g. Northgate Retail Group" /></div>
-          <div class="form-field"><label>Primary contact email</label><input type="email" /></div>
-          <div class="form-actions"><button type="button" class="btn btn-primary">Send Invitation</button></div>
-        </form>
       </div>
     </section>
   </main>
+
+  <div class="modal-overlay" id="modal-provision-dd">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Provision New Demand Driver</h2>
+      <div class="form-field"><label>Organization name</label><input type="text" placeholder="e.g. Northgate Retail Group" /></div>
+      <div class="form-field"><label>Primary contact email</label><input type="email" /></div>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Send Invitation</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-meridian-logistics-pte-ltd">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Meridian Logistics Pte Ltd</h2>
+      <p class="text-secondary">ops-lead@meridianlogistics.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (4)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Smart Logistics &amp; Supply Chain Resilience</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2, CS3 &middot; deadline 6 Mar 2026</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Maritime Digitalisation Challenge</strong><span class="badge badge-evaluating">Judging</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 14 Feb 2026 (closed)</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Port Sustainability &amp; Green Shipping Sprint</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 20 Apr 2026</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Crew Welfare &amp; Safety Tech Challenge</strong><span class="badge badge-closed">Completed</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline Closed 20 Jan 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-straits-maritime-holdings">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Straits Maritime Holdings</h2>
+      <p class="text-secondary">partnerships@straitsmaritime.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (2)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Smart Logistics &amp; Supply Chain Resilience</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2, CS3 &middot; deadline 6 Mar 2026</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Crew Welfare &amp; Safety Tech Challenge</strong><span class="badge badge-closed">Completed</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline Closed 20 Jan 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-blue-horizon-shipping-line">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Blue Horizon Shipping Line</h2>
+      <p class="text-secondary">partnerships@bluehorizonshipping.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (1)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Smart Logistics &amp; Supply Chain Resilience</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2, CS3 &middot; deadline 6 Mar 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-compass-bunkering-pte-ltd">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Compass Bunkering Pte Ltd</h2>
+      <p class="text-secondary">ops@compassbunkering.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (2)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Smart Logistics &amp; Supply Chain Resilience</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2, CS3 &middot; deadline 6 Mar 2026</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Port Sustainability &amp; Green Shipping Sprint</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 20 Apr 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-kestrel-tanker-group">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Kestrel Tanker Group</h2>
+      <p class="text-secondary">partnerships@kestreltankers.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (1)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Maritime Digitalisation Challenge</strong><span class="badge badge-evaluating">Judging</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 14 Feb 2026 (closed)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-anchorpoint-marine-services">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Anchorpoint Marine Services</h2>
+      <p class="text-secondary">contact@anchorpointmarine.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (1)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Maritime Digitalisation Challenge</strong><span class="badge badge-evaluating">Judging</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 14 Feb 2026 (closed)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-nautica-shipyard-amp-repair">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Nautica Shipyard &amp; Repair</h2>
+      <p class="text-secondary">partnerships@nauticashipyard.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (2)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Maritime Digitalisation Challenge</strong><span class="badge badge-evaluating">Judging</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 14 Feb 2026 (closed)</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Crew Welfare &amp; Safety Tech Challenge</strong><span class="badge badge-closed">Completed</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline Closed 20 Jan 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-tidewater-offshore-solutions">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Tidewater Offshore Solutions</h2>
+      <p class="text-secondary">contact@tidewateroffshore.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (1)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Port Sustainability &amp; Green Shipping Sprint</strong><span class="badge badge-open">Live</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline 20 Apr 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dd-voyager-freight-lines">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Voyager Freight Lines</h2>
+      <p class="text-secondary">partnerships@voyagerfreight.sg</p>
+      <hr class="tab-divider" />
+      <h4 class="mt-0">Open Innovation Challenges (1)</h4>
+      
+      <div class="card" style="margin-bottom:12px;">
+        <div class="flex-between"><strong>Crew Welfare &amp; Safety Tech Challenge</strong><span class="badge badge-closed">Completed</span></div>
+        <p class="text-secondary mt-0">Challenge statements: CS1, CS2 &middot; deadline Closed 20 Jan 2026</p>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container-wide">
