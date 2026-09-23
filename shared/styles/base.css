@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+/* Scrolling stays enabled everywhere; the scrollbar itself is just never drawn. */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   height: 100%;
 }

@@ -147,9 +147,10 @@ function initStatusFilter() {
 
 function initAddEventForms() {
   document.querySelectorAll("[data-add-event]").forEach((form) => {
-    const list = form.closest("[data-timeline-tab]")?.querySelector(".milestone-list");
+    const list = document.getElementById(form.dataset.targetList);
     const nameInput = form.querySelector('[data-field="name"]');
     const dateInput = form.querySelector('[data-field="date"]');
+    const descInput = form.querySelector('[data-field="description"]');
     const button = form.querySelector('[data-action="add-event"]');
     if (!list || !nameInput || !dateInput || !button) return;
     button.addEventListener("click", () => {
@@ -159,6 +160,7 @@ function initAddEventForms() {
       const displayDate = new Date(date).toLocaleString("en-SG", {
         day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit",
       });
+      const description = descInput && descInput.value.trim() ? descInput.value.trim() : "No description yet - click to edit.";
       const card = document.createElement("div");
       card.className = "milestone-card is-upcoming";
       card.innerHTML = `
@@ -166,11 +168,37 @@ function initAddEventForms() {
         <div>
           <div class="milestone-row"><span class="milestone-date">${displayDate}</span><span class="badge badge-open">Upcoming</span></div>
           <strong>${name}</strong>
-          <p class="text-secondary">No description yet - click to edit.</p>
+          <p class="text-secondary">${description}</p>
         </div>`;
       list.appendChild(card);
       nameInput.value = "";
       dateInput.value = "";
+      if (descInput) descInput.value = "";
+      form.closest(".modal-overlay")?.classList.remove("is-open");
+    });
+  });
+}
+
+function initAddStatementForms() {
+  document.querySelectorAll("[data-add-statement]").forEach((form) => {
+    const list = document.getElementById(form.dataset.targetList);
+    const titleInput = form.querySelector('[data-field="title"]');
+    const descInput = form.querySelector('[data-field="description"]');
+    const button = form.querySelector('[data-action="add-statement"]');
+    if (!list || !titleInput || !descInput || !button) return;
+    button.addEventListener("click", () => {
+      const title = titleInput.value.trim();
+      const description = descInput.value.trim();
+      if (!title || !description) return;
+      const code = `CS${list.children.length + 1}`;
+      const card = document.createElement("div");
+      card.className = "card";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `<strong>${code} &middot; ${title}</strong><p class="text-secondary mt-0">${description}</p>`;
+      list.appendChild(card);
+      titleInput.value = "";
+      descInput.value = "";
+      form.closest(".modal-overlay")?.classList.remove("is-open");
     });
   });
 }
@@ -187,4 +215,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initViewToggle();
   initStatusFilter();
   initAddEventForms();
+  initAddStatementForms();
 });

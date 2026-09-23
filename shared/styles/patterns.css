@@ -638,6 +638,12 @@
   color: var(--color-brand-red);
 }
 
+/* Fixed-height tab content inside a modal, so switching tabs doesn't resize the modal itself. */
+.modal .tabs__panel.is-active {
+  height: 460px;
+  overflow-y: auto;
+}
+
 .data-table--clickable tbody tr {
   cursor: pointer;
 }
