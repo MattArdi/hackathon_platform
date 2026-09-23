@@ -146,6 +146,13 @@ main {
   gap: 20px;
 }
 
+.grid > * {
+  /* Grid items default to min-width:auto, which lets long text push past its
+     own track instead of wrapping inside it - min-width:0 makes the item
+     respect its actual bounding box. */
+  min-width: 0;
+}
+
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
 }

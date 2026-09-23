@@ -15,7 +15,7 @@
     <div class="container-wide">
       <a href="my-hackathons.html" class="site-header__logo">EnterpriseSG <span>Challenge Console</span><small>Demand Driver &amp; EnterpriseSG workspace</small></a>
       <div class="site-header__right">
-        <nav class="site-nav"><a href="my-hackathons.html" aria-current="page">Control Panel</a></nav><div class="site-header__actions"><a href="demand-driver-management.html" class="topbar-link">Demand Drivers</a><a href="notifications.html" class="topbar-link">Notifications</a><a href="account.html" class="topbar-link">Account</a><a href="../login.html" class="btn btn-secondary">Log Out</a></div>
+        <nav class="site-nav"><a href="my-hackathons.html" class="topbar-link" aria-current="page">Control Panel</a><a href="demand-driver-management.html" class="topbar-link">Demand Drivers</a><a href="notifications.html" class="topbar-link">Notifications</a><a href="account.html" class="topbar-link">Account</a></nav><a href="../login.html" class="btn btn-secondary">Log Out</a>
       </div>
     </div>
   </header>
@@ -251,11 +251,11 @@
           </div>
         </div>
         </div>
-        <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-smart-logistics">Add Event</button>
+        <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-smart-logistics">+ Add Event</button>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div id="statements-list-smart-logistics"><div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Container Yard Congestion</strong><p class="text-secondary mt-0">Forecast yard congestion 4-12 hours ahead using gate-in/out and berth schedule data.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Last-Mile Route Optimization</strong><p class="text-secondary mt-0">Re-plan last-mile delivery routes in real time against live traffic and delivery-window changes.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS3 &middot; Supply Chain Risk Alerting</strong><p class="text-secondary mt-0">Surface upstream supplier and shipping-lane risk as an early-warning feed for ops planners.</p></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-smart-logistics">Add Challenge Statement</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-smart-logistics">+ Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
       <div class="replace-preview__file">
@@ -284,7 +284,7 @@
 
       <h4>FAQs</h4>
       <div id="faq-list-smart-logistics"><div class="card" style="margin-bottom:10px;"><strong>Who can participate?</strong><p class="text-secondary mt-0">Any Singapore-registered company or individual forming a team of up to 5 people.</p><a href="#">Edit</a></div><div class="card" style="margin-bottom:10px;"><strong>Can I submit for more than one challenge statement?</strong><p class="text-secondary mt-0">Yes, as separate submissions per statement.</p><a href="#">Edit</a></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-smart-logistics">Add FAQ</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%;" data-modal-target="modal-add-faq-smart-logistics">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -463,7 +463,7 @@
         <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
         <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe this event"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-event">+ Add Event</button></div>
       </div>
     </div>
   </div>
@@ -475,7 +475,7 @@
       <div data-add-statement data-target-list="statements-list-smart-logistics">
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-statement">+ Add Challenge Statement</button></div>
       </div>
     </div>
   </div>
@@ -500,7 +500,7 @@
       <div data-add-faq data-target-list="faq-list-smart-logistics">
         <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
         <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-faq">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -651,11 +651,11 @@
           </div>
         </div>
         </div>
-        <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-maritime-digitalisation">Add Event</button>
+        <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-maritime-digitalisation">+ Add Event</button>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div id="statements-list-maritime-digitalisation"><div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Predictive Engine Maintenance</strong><p class="text-secondary mt-0">Forecast engine and drivetrain failure risk from onboard sensor data before it causes unscheduled downtime.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Digital Crew Scheduling</strong><p class="text-secondary mt-0">Optimize crew rotation and rest-hour compliance across a mixed fleet of tankers and support vessels.</p></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-maritime-digitalisation">Add Challenge Statement</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-maritime-digitalisation">+ Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
       <div class="replace-preview__file">
@@ -684,7 +684,7 @@
 
       <h4>FAQs</h4>
       <div id="faq-list-maritime-digitalisation"><div class="card" style="margin-bottom:10px;"><strong>What sensor data is provided?</strong><p class="text-secondary mt-0">Anonymized engine telemetry from 6 vessels across the sponsoring fleets, 18 months of history.</p><a href="#">Edit</a></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-maritime-digitalisation">Add FAQ</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%;" data-modal-target="modal-add-faq-maritime-digitalisation">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -832,7 +832,7 @@
         <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
         <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe this event"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-event">+ Add Event</button></div>
       </div>
     </div>
   </div>
@@ -844,7 +844,7 @@
       <div data-add-statement data-target-list="statements-list-maritime-digitalisation">
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-statement">+ Add Challenge Statement</button></div>
       </div>
     </div>
   </div>
@@ -869,7 +869,7 @@
       <div data-add-faq data-target-list="faq-list-maritime-digitalisation">
         <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
         <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-faq">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1011,11 +1011,11 @@
           </div>
         </div>
         </div>
-        <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-green-shipping">Add Event</button>
+        <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-green-shipping">+ Add Event</button>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div id="statements-list-green-shipping"><div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Emissions Tracking Dashboard</strong><p class="text-secondary mt-0">Aggregate fuel consumption and emissions data across a mixed fleet into one live dashboard.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Green Bunkering Route Optimization</strong><p class="text-secondary mt-0">Sequence bunkering calls to minimize idle time and emissions during fuel transfer.</p></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-green-shipping">Add Challenge Statement</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-green-shipping">+ Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
       <div class="replace-preview__file">
@@ -1039,7 +1039,7 @@
 
       <h4>FAQs</h4>
       <div id="faq-list-green-shipping"><div class="card" style="margin-bottom:10px;"><strong>Is this open to teams outside Singapore?</strong><p class="text-secondary mt-0">No, open to Singapore-registered entities and individuals only.</p><a href="#">Edit</a></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-green-shipping">Add FAQ</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%;" data-modal-target="modal-add-faq-green-shipping">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1167,7 +1167,7 @@
         <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
         <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe this event"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-event">+ Add Event</button></div>
       </div>
     </div>
   </div>
@@ -1179,7 +1179,7 @@
       <div data-add-statement data-target-list="statements-list-green-shipping">
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-statement">+ Add Challenge Statement</button></div>
       </div>
     </div>
   </div>
@@ -1204,7 +1204,7 @@
       <div data-add-faq data-target-list="faq-list-green-shipping">
         <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
         <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-faq">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1355,11 +1355,11 @@
           </div>
         </div>
         </div>
-        <button type="button" class="btn btn-primary" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-crew-welfare">Add Event</button>
+        <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:16px;" data-modal-target="modal-add-event-crew-welfare">+ Add Event</button>
       </div></div>
         <div class="tabs__panel" data-panel="statements">
       <div id="statements-list-crew-welfare"><div class="card" style="margin-bottom:12px;"><strong>CS1 &middot; Fatigue Monitoring Wearables</strong><p class="text-secondary mt-0">Wearable-based fatigue detection with alerts for watchkeeping crew.</p></div><div class="card" style="margin-bottom:12px;"><strong>CS2 &middot; Onboard Mental Health Support Platform</strong><p class="text-secondary mt-0">Confidential, low-bandwidth support access for crew on long voyages.</p></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-crew-welfare">Add Challenge Statement</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-crew-welfare">+ Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
       <div class="replace-preview__file">
@@ -1388,7 +1388,7 @@
 
       <h4>FAQs</h4>
       <div id="faq-list-crew-welfare"><div class="card" style="margin-bottom:10px;"><strong>Were the winning solutions piloted?</strong><p class="text-secondary mt-0">Yes - both winners are in an 8-week pilot across the sponsoring fleets as of Jan 2026.</p><a href="#">Edit</a></div></div>
-      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-crew-welfare">Add FAQ</button></div>
+      <button type="button" class="btn btn-primary btn-add" style="width:100%;" data-modal-target="modal-add-faq-crew-welfare">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1536,7 +1536,7 @@
         <div class="form-field"><label>Event name</label><input type="text" data-field="name" placeholder="e.g. Investor demo day" /></div>
         <div class="form-field"><label>Date &amp; time</label><input type="datetime-local" data-field="date" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe this event"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-event">Add Event</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-event">+ Add Event</button></div>
       </div>
     </div>
   </div>
@@ -1548,7 +1548,7 @@
       <div data-add-statement data-target-list="statements-list-crew-welfare">
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-statement">+ Add Challenge Statement</button></div>
       </div>
     </div>
   </div>
@@ -1573,7 +1573,7 @@
       <div data-add-faq data-target-list="faq-list-crew-welfare">
         <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
         <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary btn-add" data-action="add-faq">+ Add FAQ</button></div>
       </div>
     </div>
   </div>
