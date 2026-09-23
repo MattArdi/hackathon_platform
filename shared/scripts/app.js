@@ -203,6 +203,36 @@ function initAddStatementForms() {
   });
 }
 
+function initAddRecordingForms() {
+  document.querySelectorAll("[data-add-recording]").forEach((form) => {
+    const list = document.getElementById(form.dataset.targetList);
+    const titleInput = form.querySelector('[data-field="title"]');
+    const dateInput = form.querySelector('[data-field="date"]');
+    const durationInput = form.querySelector('[data-field="duration"]');
+    const button = form.querySelector('[data-action="add-recording"]');
+    if (!list || !titleInput || !dateInput || !durationInput || !button) return;
+    button.addEventListener("click", () => {
+      const title = titleInput.value.trim();
+      const date = dateInput.value.trim();
+      const duration = durationInput.value.trim();
+      if (!title || !date) return;
+      const meta = duration ? `${date} &middot; ${duration}` : date;
+      const card = document.createElement("div");
+      card.className = "replace-preview__file";
+      card.style.marginBottom = "10px";
+      card.innerHTML = `
+        <span class="download-card__icon">MP4</span>
+        <span class="download-card__meta"><strong>${title}</strong><span>${meta}</span></span>
+        <div class="file-overlay">&#9998; Replace</div>`;
+      list.appendChild(card);
+      titleInput.value = "";
+      dateInput.value = "";
+      durationInput.value = "";
+      form.closest(".modal-overlay")?.classList.remove("is-open");
+    });
+  });
+}
+
 function initAddFaqForms() {
   document.querySelectorAll("[data-add-faq]").forEach((form) => {
     const list = document.getElementById(form.dataset.targetList);
@@ -239,5 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initStatusFilter();
   initAddEventForms();
   initAddStatementForms();
+  initAddRecordingForms();
   initAddFaqForms();
 });

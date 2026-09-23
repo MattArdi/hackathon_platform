@@ -258,7 +258,7 @@
       <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-smart-logistics">Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="replace-preview__file" style="max-width:480px;">
+      <div class="replace-preview__file">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
         <div class="file-overlay">&#9998; Replace</div>
@@ -267,7 +267,7 @@
       <hr class="tab-divider" />
 
       <h4 class="mt-0">Recordings</h4>
-      
+      <div id="recordings-list-smart-logistics">
       <div class="replace-preview__file" style="margin-bottom:10px;">
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Challenge briefing session</strong><span>22 Jan 2026 &middot; 54 min</span></span>
@@ -277,8 +277,8 @@
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Mid-challenge clinic</strong><span>6 Feb 2026 &middot; 38 min</span></span>
         <div class="file-overlay">&#9998; Replace</div>
-      </div>
-      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+      </div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-recording-smart-logistics">+ Upload New Recording</button>
 
       <hr class="tab-divider" />
 
@@ -480,6 +480,19 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-add-recording-smart-logistics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Upload New Recording</h2>
+      <div data-add-recording data-target-list="recordings-list-smart-logistics">
+        <div class="form-field"><label>Recording title</label><input type="text" data-field="title" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date</label><input type="text" data-field="date" placeholder="e.g. 6 Mar 2026" /></div>
+        <div class="form-field"><label>Duration</label><input type="text" data-field="duration" placeholder="e.g. 42 min" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-recording">Upload Recording</button></div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-add-faq-smart-logistics">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -645,7 +658,7 @@
       <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-maritime-digitalisation">Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="replace-preview__file" style="max-width:480px;">
+      <div class="replace-preview__file">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
         <div class="file-overlay">&#9998; Replace</div>
@@ -654,7 +667,7 @@
       <hr class="tab-divider" />
 
       <h4 class="mt-0">Recordings</h4>
-      
+      <div id="recordings-list-maritime-digitalisation">
       <div class="replace-preview__file" style="margin-bottom:10px;">
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Challenge briefing session</strong><span>10 Dec 2025 &middot; 47 min</span></span>
@@ -664,8 +677,8 @@
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Vessel sensor data walkthrough</strong><span>18 Dec 2025 &middot; 19 min</span></span>
         <div class="file-overlay">&#9998; Replace</div>
-      </div>
-      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+      </div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-recording-maritime-digitalisation">+ Upload New Recording</button>
 
       <hr class="tab-divider" />
 
@@ -836,6 +849,19 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-add-recording-maritime-digitalisation">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Upload New Recording</h2>
+      <div data-add-recording data-target-list="recordings-list-maritime-digitalisation">
+        <div class="form-field"><label>Recording title</label><input type="text" data-field="title" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date</label><input type="text" data-field="date" placeholder="e.g. 6 Mar 2026" /></div>
+        <div class="form-field"><label>Duration</label><input type="text" data-field="duration" placeholder="e.g. 42 min" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-recording">Upload Recording</button></div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-add-faq-maritime-digitalisation">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -992,7 +1018,7 @@
       <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-green-shipping">Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="replace-preview__file" style="max-width:480px;">
+      <div class="replace-preview__file">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
         <div class="file-overlay">&#9998; Replace</div>
@@ -1001,13 +1027,13 @@
       <hr class="tab-divider" />
 
       <h4 class="mt-0">Recordings</h4>
-      
+      <div id="recordings-list-green-shipping">
       <div class="replace-preview__file" style="margin-bottom:10px;">
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Challenge briefing session</strong><span>16 Feb 2026 &middot; 41 min</span></span>
         <div class="file-overlay">&#9998; Replace</div>
-      </div>
-      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+      </div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-recording-green-shipping">+ Upload New Recording</button>
 
       <hr class="tab-divider" />
 
@@ -1154,6 +1180,19 @@
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
         <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-add-recording-green-shipping">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Upload New Recording</h2>
+      <div data-add-recording data-target-list="recordings-list-green-shipping">
+        <div class="form-field"><label>Recording title</label><input type="text" data-field="title" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date</label><input type="text" data-field="date" placeholder="e.g. 6 Mar 2026" /></div>
+        <div class="form-field"><label>Duration</label><input type="text" data-field="duration" placeholder="e.g. 42 min" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-recording">Upload Recording</button></div>
       </div>
     </div>
   </div>
@@ -1323,7 +1362,7 @@
       <button type="button" class="btn btn-primary" style="width:100%; margin-top:8px;" data-modal-target="modal-add-statement-crew-welfare">Add Challenge Statement</button></div>
         <div class="tabs__panel" data-panel="content">
       <h4 class="mt-0">Terms &amp; Conditions</h4>
-      <div class="replace-preview__file" style="max-width:480px;">
+      <div class="replace-preview__file">
         <span class="download-card__icon">DOCX</span>
         <span class="download-card__meta"><strong>Terms_and_Conditions_Placeholder.docx</strong><span>Current version</span></span>
         <div class="file-overlay">&#9998; Replace</div>
@@ -1332,7 +1371,7 @@
       <hr class="tab-divider" />
 
       <h4 class="mt-0">Recordings</h4>
-      
+      <div id="recordings-list-crew-welfare">
       <div class="replace-preview__file" style="margin-bottom:10px;">
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Challenge briefing session</strong><span>14 Oct 2025 &middot; 50 min</span></span>
@@ -1342,8 +1381,8 @@
         <span class="download-card__icon">MP4</span>
         <span class="download-card__meta"><strong>Winners announcement</strong><span>20 Jan 2026 &middot; 15 min</span></span>
         <div class="file-overlay">&#9998; Replace</div>
-      </div>
-      <div class="form-actions"><button type="button" class="btn btn-secondary">+ Upload New Recording</button></div>
+      </div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-recording-crew-welfare">+ Upload New Recording</button>
 
       <hr class="tab-divider" />
 
@@ -1510,6 +1549,19 @@
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
         <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-add-recording-crew-welfare">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Upload New Recording</h2>
+      <div data-add-recording data-target-list="recordings-list-crew-welfare">
+        <div class="form-field"><label>Recording title</label><input type="text" data-field="title" placeholder="e.g. Investor demo day" /></div>
+        <div class="form-field"><label>Date</label><input type="text" data-field="date" placeholder="e.g. 6 Mar 2026" /></div>
+        <div class="form-field"><label>Duration</label><input type="text" data-field="duration" placeholder="e.g. 42 min" /></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-recording">Upload Recording</button></div>
       </div>
     </div>
   </div>
