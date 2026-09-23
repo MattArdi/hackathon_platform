@@ -203,6 +203,29 @@ function initAddStatementForms() {
   });
 }
 
+function initAddFaqForms() {
+  document.querySelectorAll("[data-add-faq]").forEach((form) => {
+    const list = document.getElementById(form.dataset.targetList);
+    const questionInput = form.querySelector('[data-field="question"]');
+    const answerInput = form.querySelector('[data-field="answer"]');
+    const button = form.querySelector('[data-action="add-faq"]');
+    if (!list || !questionInput || !answerInput || !button) return;
+    button.addEventListener("click", () => {
+      const question = questionInput.value.trim();
+      const answer = answerInput.value.trim();
+      if (!question || !answer) return;
+      const card = document.createElement("div");
+      card.className = "card";
+      card.style.marginBottom = "10px";
+      card.innerHTML = `<strong>${question}</strong><p class="text-secondary mt-0">${answer}</p><a href="#">Edit</a>`;
+      list.appendChild(card);
+      questionInput.value = "";
+      answerInput.value = "";
+      form.closest(".modal-overlay")?.classList.remove("is-open");
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initAccordions();
   initTabs();
@@ -216,4 +239,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initStatusFilter();
   initAddEventForms();
   initAddStatementForms();
+  initAddFaqForms();
 });

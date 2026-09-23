@@ -283,12 +283,8 @@
       <hr class="tab-divider" />
 
       <h4>FAQs</h4>
-      <div class="card" style="margin-bottom:10px;"><strong>Who can participate?</strong><p class="text-secondary mt-0">Any Singapore-registered company or individual forming a team of up to 5 people.</p><a href="#">Edit</a></div><div class="card" style="margin-bottom:10px;"><strong>Can I submit for more than one challenge statement?</strong><p class="text-secondary mt-0">Yes, as separate submissions per statement.</p><a href="#">Edit</a></div>
-      <div class="card" style="max-width:520px;">
-        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
-        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
-      </div></div>
+      <div id="faq-list-smart-logistics"><div class="card" style="margin-bottom:10px;"><strong>Who can participate?</strong><p class="text-secondary mt-0">Any Singapore-registered company or individual forming a team of up to 5 people.</p><a href="#">Edit</a></div><div class="card" style="margin-bottom:10px;"><strong>Can I submit for more than one challenge statement?</strong><p class="text-secondary mt-0">Yes, as separate submissions per statement.</p><a href="#">Edit</a></div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-smart-logistics">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -484,6 +480,18 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="modal-add-faq-smart-logistics">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Add FAQ</h2>
+      <div data-add-faq data-target-list="faq-list-smart-logistics">
+        <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-maritime-digitalisation">
     <div class="modal">
       <button class="modal__close" aria-label="Close">&times;</button>
@@ -662,12 +670,8 @@
       <hr class="tab-divider" />
 
       <h4>FAQs</h4>
-      <div class="card" style="margin-bottom:10px;"><strong>What sensor data is provided?</strong><p class="text-secondary mt-0">Anonymized engine telemetry from 6 vessels across the sponsoring fleets, 18 months of history.</p><a href="#">Edit</a></div>
-      <div class="card" style="max-width:520px;">
-        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
-        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
-      </div></div>
+      <div id="faq-list-maritime-digitalisation"><div class="card" style="margin-bottom:10px;"><strong>What sensor data is provided?</strong><p class="text-secondary mt-0">Anonymized engine telemetry from 6 vessels across the sponsoring fleets, 18 months of history.</p><a href="#">Edit</a></div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-maritime-digitalisation">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -828,6 +832,18 @@
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
         <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-add-faq-maritime-digitalisation">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Add FAQ</h2>
+      <div data-add-faq data-target-list="faq-list-maritime-digitalisation">
+        <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -996,12 +1012,8 @@
       <hr class="tab-divider" />
 
       <h4>FAQs</h4>
-      <div class="card" style="margin-bottom:10px;"><strong>Is this open to teams outside Singapore?</strong><p class="text-secondary mt-0">No, open to Singapore-registered entities and individuals only.</p><a href="#">Edit</a></div>
-      <div class="card" style="max-width:520px;">
-        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
-        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
-      </div></div>
+      <div id="faq-list-green-shipping"><div class="card" style="margin-bottom:10px;"><strong>Is this open to teams outside Singapore?</strong><p class="text-secondary mt-0">No, open to Singapore-registered entities and individuals only.</p><a href="#">Edit</a></div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-green-shipping">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1142,6 +1154,18 @@
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
         <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-add-faq-green-shipping">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Add FAQ</h2>
+      <div data-add-faq data-target-list="faq-list-green-shipping">
+        <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1324,12 +1348,8 @@
       <hr class="tab-divider" />
 
       <h4>FAQs</h4>
-      <div class="card" style="margin-bottom:10px;"><strong>Were the winning solutions piloted?</strong><p class="text-secondary mt-0">Yes - both winners are in an 8-week pilot across the sponsoring fleets as of Jan 2026.</p><a href="#">Edit</a></div>
-      <div class="card" style="max-width:520px;">
-        <div class="form-field"><label>Question</label><input type="text" placeholder="Add a question" /></div>
-        <div class="form-field"><label>Answer</label><textarea rows="2" placeholder="Add the answer"></textarea></div>
-        <div class="form-actions"><button type="button" class="btn btn-primary">Add FAQ</button></div>
-      </div></div>
+      <div id="faq-list-crew-welfare"><div class="card" style="margin-bottom:10px;"><strong>Were the winning solutions piloted?</strong><p class="text-secondary mt-0">Yes - both winners are in an 8-week pilot across the sponsoring fleets as of Jan 2026.</p><a href="#">Edit</a></div></div>
+      <button type="button" class="btn btn-primary" style="width:100%;" data-modal-target="modal-add-faq-crew-welfare">Add FAQ</button></div>
       </div>
     </div>
   </div>
@@ -1490,6 +1510,18 @@
         <div class="form-field"><label>Title</label><input type="text" data-field="title" placeholder="e.g. Cold Chain Visibility" /></div>
         <div class="form-field"><label>Description</label><textarea rows="3" data-field="description" placeholder="Describe the problem statement..."></textarea></div>
         <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-statement">Add Challenge Statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-add-faq-crew-welfare">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2 class="mt-0">Add FAQ</h2>
+      <div data-add-faq data-target-list="faq-list-crew-welfare">
+        <div class="form-field"><label>Question</label><input type="text" data-field="question" placeholder="Add a question" /></div>
+        <div class="form-field"><label>Answer</label><textarea rows="3" data-field="answer" placeholder="Add the answer"></textarea></div>
+        <div class="form-actions"><button type="button" class="btn btn-primary" data-action="add-faq">Add FAQ</button></div>
       </div>
     </div>
   </div>
